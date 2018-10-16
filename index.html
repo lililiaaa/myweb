@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>基于HTML5的3D翻转轮播幻灯片特效代码</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="images/css/style.css" />
+<script type='text/javascript' src='images/js/modernizr.min.js?ver=2.6.1'></script>
+  <script src="images/js/jquery-3.3.1.min.js"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CSSettings = {"pluginPath":"images"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='images/js/cute.slider.js?ver=2.0.0'></script>
+<script type='text/javascript' src='images/js/cute.transitions.all.js?ver=2.0.0'></script>
+  <style>
+
+    .text{
+      color: #404040;
+      margin: 43px;
+      z-index: 200;
+    }
+    .text0{
+      font-weight: 700;
+      font-size: 80px;
+    }
+    .text1{
+      font-size: 30px;
+    }
+    .text2{
+      font-size: 30px;
+      font-weight: 600;
+    }
+    .text3{
+      font-size: 30px;
+    }
+    .mtn{
+      margin-top: -510px;
+      margin-left: 20%;
+      display: flex;
+
+      align-items: center;
+      flex-direction: column;
+      z-index: 10;
+      position: absolute;
+    }
+    .myname{
+      transition:all .5s ease-in;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .myname:hover{
+      border: 2px solid black;
+      border-radius: 50px;
+      box-shadow: 0px 25px 25px 0 rgba(0, 0, 0, 0.72);
+    }
+    #nav-all{
+      margin-top: -667px;
+      margin-left: 183px;
+      position: absolute;
+      z-index: 200;
+    }
+    .nav{
+      transition: all .2s ease-in;
+      display: none;
+      width: 1250px;
+      margin-top: -81px;
+      z-index: 80;
+      margin-left: 55px;
+      background-color: black;
+      color: #ffd920;
+      font-size: 23px;
+      border: 1px solid #ffd920;
+      border-radius: 30px;
+    }
+    .nav-li div{
+      margin: 20px 50px;
+      transition: all .2s ease-in;
+    }
+    .nav-li{
+        display: flex;
+      transition: all .2s ease-in;
+    }
+    .nav-li div:hover{
+      font-weight: 600;
+      font-size: 30px;
+    }
+    .header{
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid #ffd920;
+      width: 100px;
+      height: 100px;
+      z-index: 100;
+    }
+    .nav  .na-1{
+      margin-left: 130px;
+    }
+    .header img{
+      width: 100px;
+      height: 100px;
+    }
+    .circle{
+      position: absolute;
+      margin-top: -502px;
+      margin-left: 232px;
+      z-index: 100;
+      height: 435px;
+      border-left: 2px solid #ffd920;
+    }
+    .circle li{
+      background: #ffd920;
+      list-style: none;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      margin: 43px;
+      margin-left: -50px;
+    }
+    .circle .select-circle{
+      background: black;
+      border: 7px solid #ffd920;
+      margin-left: -57px;
+    }
+
+  </style>
+</head>
+<body>
+<!--首页-->
+<div class="body">
+<div class="c-demoslider">
+  <div id="cuteslider_3_wrapper" class="cs-circleslight">
+    <div id="cuteslider_3" class="cute-slider" data-width="970" data-height="425" data-overpause="true">
+      <ul data-type="slides">
+        <li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr27,tr32,tr53,tr54,tr62,tr63,tr4,tr13,tr45" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="images/001/8.jpg" data-thumb="images/001/8a.jpg"><a data-type="link" href="#" ></a> </li>
+        <li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr32,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="images/bg/blank.png" data-src="images/001/9.jpg" data-thumb="images/001/9a.jpg"><a data-type="link" href="#" ></a> </li>
+        <li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr32,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr41"><img  src="images/bg/blank.png" data-src="images/001/hhh.jpg" data-thumb="images/001/hhha.jpg"><a data-type="link" href="#" ></a> </li>
+        <li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr32,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="images/bg/blank.png" data-src="images/001/timg.jpg" data-thumb="images/001/timga.jpg"><a data-type="link" href="#" ></a></li>
+        <li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr32,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="images/bg/blank.png" data-src="images/001/7.jpg" data-thumb="images/001/7a.jpg"><a data-type="link" href="#" ></a></li>
+        <li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr32,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="images/bg/blank.png" data-src="images/001/1.png" data-thumb="images/001/1a.jpg"><a data-type="link" href="#" ></a> </li>
+      </ul>
+      <ul data-type="controls">
+        <li data-type="captions"></li>
+        <li data-type="link"></li>
+        <li data-type="video"></li>
+        <li data-type="slideinfo"></li>
+        <li data-type="circletimer"></li>
+        <li data-type="previous"></li>
+        <li data-type="next"></li>
+        <li data-type="bartimer"></li>
+        <li data-type="slidecontrol" data-thumb="true" data-thumbalign="up"></li>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+	  var cuteslider3 = new Cute.Slider();
+		cuteslider3.setup("cuteslider_3", "cuteslider_3_wrapper", "images/css/slider-style.css");
+		cuteslider3.api.addEventListener(Cute.SliderEvent.CHANGE_START,
+		function(event) {});
+		cuteslider3.api.addEventListener(Cute.SliderEvent.CHANGE_END,
+		function(event) {});
+		cuteslider3.api.addEventListener(Cute.SliderEvent.WATING,
+		function(event) {});
+		cuteslider3.api.addEventListener(Cute.SliderEvent.CHANGE_NEXT_SLIDE,
+		function(event) {});
+		cuteslider3.api.addEventListener(Cute.SliderEvent.WATING_FOR_NEXT,
+		function(event) {});
+  </script> 
+</div>
+<div id="nav-all">
+  <div class="header" id="header">
+    <img src="images/001/header.jpg" alt="">
+  </div>
+  <div class="nav" id="nav">
+    <div class="nav-li">
+      <div class="na-1">我的博客</div>
+      <div>我的简介</div>
+      <div>我的项目</div>
+      <div>我的荣誉</div>
+      <div>我的技能</div>
+      <div>联系我</div>
+    </div>
+  </div>
+</div>
+<div class="mtn">
+  <div class="myname">
+    <div class="text text0">welcome to my blog!</div>
+    <div class="text text1">The footsteps of struggle never cease！</div>
+    <div class="text text2">您好，我是李振婷</div>
+    <div class="text text3">一个努力向上的前端学习者</div>
+  </div>
+</div>
+<ul class="circle" id="circle">
+  <li class="select-circle"></li>
+  <li class=""></li>
+  <li class=""></li>
+  <li class=""></li>
+  <li class=""></li>
+  <li class=""></li>
+</ul>
+<script>
+
+  $("#header").on('mouseover',function () {
+      $('#nav').slideDown()
+  })
+
+  $("#nav-all").on('mouseleave',function () {
+      $('#nav').slideUp()
+  })
+  $("#nav-all").on('mouseover',function () {
+      $('#nav').css('display','block')
+  })
+  $(".circle li").on('click',function () {
+      $(this).addClass('select-circle').siblings().removeClass('select-circle')
+  })
+
+
+</script>
+<!-- wrapper -->
+</div>
+<!--个人介绍-->
+<div class="introduction">
+  <div class="box">
+    <div class="photo">
+      <div class="phbox"></div>
+      <div><img src="images/001/my01.JPG" alt=""></div>
+
+    </div>
+    <div class="mytext">
+      <h1>李振婷</h1>
+      <div>年龄：20</div>
+      <div>毕业院校：东北林业大学本科</div>
+      <div>联系方式：15504620218&nbsp&nbsp&nbspQQ:1123543277</div>
+      <div>电子邮箱：1123543277@qq.com</div>
+      <div>github:</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
