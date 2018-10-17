@@ -5,6 +5,7 @@
 <title>基于HTML5的3D翻转轮播幻灯片特效代码</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <link rel="stylesheet" href="images/css/style.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_876200_egj1xcybd2b.css">
 <script type='text/javascript' src='images/js/modernizr.min.js?ver=2.6.1'></script>
   <script src="images/js/jquery-3.3.1.min.js"></script>
 <script type='text/javascript'>
@@ -12,6 +13,7 @@
 var CSSettings = {"pluginPath":"images"};
 /* ]]> */
 </script>
+
 <script type='text/javascript' src='images/js/cute.slider.js?ver=2.0.0'></script>
 <script type='text/javascript' src='images/js/cute.transitions.all.js?ver=2.0.0'></script>
   <style>
@@ -117,14 +119,16 @@ var CSSettings = {"pluginPath":"images"};
       height: 20px;
       width: 20px;
       margin: 43px;
-      margin-left: -50px;
+      margin-left: -10px;
     }
     .circle .select-circle{
       background: black;
       border: 7px solid #ffd920;
-      margin-left: -57px;
+      margin-left: -17px;
     }
-
+    .introduction .cir-two{
+      margin-top:209px ;
+    }
   </style>
 </head>
 <body>
@@ -222,21 +226,41 @@ var CSSettings = {"pluginPath":"images"};
 </div>
 <!--个人介绍-->
 <div class="introduction">
+  <ul class="circle cir-two">
+    <li class=""></li>
+    <li class="select-circle"></li>
+    <li class=""></li>
+    <li class=""></li>
+    <li class=""></li>
+    <li class=""></li>
+  </ul>
   <div class="box">
-    <div class="photo">
-      <div class="phbox"></div>
-      <div><img src="images/001/my01.JPG" alt=""></div>
 
-    </div>
-    <div class="mytext">
-      <h1>李振婷</h1>
-      <div>年龄：20</div>
-      <div>毕业院校：东北林业大学本科</div>
-      <div>联系方式：15504620218&nbsp&nbsp&nbspQQ:1123543277</div>
-      <div>电子邮箱：1123543277@qq.com</div>
-      <div>github:</div>
-    </div>
+      <div class="photo">
+        <div><img src="images/001/my01.JPG" alt=""></div>
+        <div class="phbox"></div>
+      </div>
+      <div class="mytext">
+        <h1>李振婷</h1>
+        <div>年龄：20</div>
+        <div>毕业院校：东北林业大学本科</div>
+        <div>联系方式：15504620218&nbsp&nbsp&nbspQQ:1123543277</div>
+        <div>电子邮箱：1123543277@qq.com</div>
+        <div class="a">github:&nbsp&nbsp&nbsp<a href="https://github.com/lililiaaa">https://github.com/lililiaaa</a></div>
+        <a href="https://github.com/lililiaaa">
+          <div class="button">
+            <div >进入github</div>
+            <div class="div"><i class="iconfont icon-icon1"></i></div>
+          </div>
+        </a>
+      </div>
+
   </div>
+  <script>
+      $(".cir-two li").on('click',function () {
+          $(this).addClass('select-circle').siblings().removeClass('select-circle')
+      })
+  </script>
 </div>
 </body>
 </html>

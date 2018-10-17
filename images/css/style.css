@@ -1,17 +1,22 @@
 /* Div */
-
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 body{
 	background-color: #414141;
-}
-.body {
-	display: none;
-	margin:50px;
 	color:#555;
 	min-width:320px;
 	-webkit-text-size-adjust:100%;
 	font-family: "微软雅黑";
 	font-size: 14px;
 	line-height: 20px;
+}
+.body {
+
+	margin-bottom: 50px;
+	margin:50px;
 	height: 100%;
 }
 .body img {
@@ -21,7 +26,7 @@ body{
 	height:auto;
 }
 
-.body a {
+body a {
 	text-decoration:none;
 	color:#333;
 }
@@ -338,14 +343,57 @@ body{
 /*个人介绍*/
 .introduction{
 	background-color: white;
-
+	margin-top: 100px;
+	height: 52rem;
 }
 .box{
 	display: flex;
 	justify-content: space-around;
+	margin: 0 120px 0 385px;
+	padding-top: 208px;
+
 }
 .phbox{
+	margin-left: -82px;
 	height: 100px;
-	width: 300px;
+	width: 480px;
+	margin-top: -267px;
 	background-color: #ffd920;
 }
+.photo img{
+	height: 27rem;
+	width: 20rem;
+	box-shadow: 10px 10px 5px rgba(64, 64, 64, 0.5);
+}
+.mytext h1{
+	margin-bottom: 65px;
+	font-size: 40px;
+	margin-left: 28px;
+}
+.mytext div{
+	margin: 40px;
+	font-size: 20px;
+}
+.mytext a{
+	color: #ffd920;
+	display: block;
+}
+.a{
+	display: flex;
+}
+.mytext .button{
+	background-color: #ffdc64;
+	border: 3px solid #ffd920;
+	width: 160px;
+	border-radius: 30px;
+}
+.button{
+	display: flex;
+}
+.button div{
+	margin: 10px;
+	color: #fffbfd;
+
+	font-weight: 500;
+}
+
