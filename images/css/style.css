@@ -5,16 +5,16 @@
 	list-style: none;
 }
 body{
-	background-color: #414141;
+	background-color: #4a4a4a;
 	color:#555;
-	min-width:320px;
+
 	-webkit-text-size-adjust:100%;
 	font-family: "微软雅黑";
 	font-size: 14px;
 	line-height: 20px;
 }
 .body {
-
+	min-width:1430px;
 	margin-bottom: 50px;
 	margin:50px;
 	height: 100%;
@@ -344,28 +344,63 @@ body a {
 .introduction{
 	background-color: white;
 	margin-top: 100px;
-	height: 52rem;
+	height: 65rem;
+}
+.introduction .sk-title{
+	padding-top: 160px;
+}
+
+.introduction b{
+	font-size: 70px;
+}
+.introduction .in-name{
+	background: white;
 }
 .box{
 	display: flex;
 	justify-content: space-around;
 	margin: 0 120px 0 385px;
-	padding-top: 208px;
+	padding-top: 50px;
+	min-width: 1010px;
+}
+.myph{
+	display: flex;
 
 }
+.photo-left{
+	display: none;
+}
+.photo-middle{
+	display: block;
+}
+.photo-right{
+	display: none;
+}
+.photo-left,.photo-right,.photo-middle{
+	opacity: 1;
+}
+.photo-small{
+
+	margin: 77px 70px 102px 0;
+	height: 17rem;
+	width: 10rem;
+	box-shadow: 10px 10px 5px rgba(64, 64, 64, 0.5);
+}
 .phbox{
+	transition: all 0.2s ease-in;
 	margin-left: -82px;
 	height: 100px;
 	width: 480px;
 	margin-top: -267px;
 	background-color: #ffd920;
 }
-.photo img{
+.photo-big{
+	transition: all .5s ease-in;
 	height: 27rem;
 	width: 20rem;
 	box-shadow: 10px 10px 5px rgba(64, 64, 64, 0.5);
 }
-.mytext h1{
+.introduction .mytext h1{
 	margin-bottom: 65px;
 	font-size: 40px;
 	margin-left: 28px;
@@ -396,4 +431,195 @@ body a {
 
 	font-weight: 500;
 }
+/*我的技能*/
+.skill{
+	background-color: #4a4a4a;
+	margin-top: 100px;
+	height: 17rem;
+}
+.sk-title{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #a6a6a6;
+	padding-top: 50px;
+}
+.sk-line{
+	width: 70%;
+	border: 1px solid #ffd920;
+}
+.sk-name{
+	color: #ffd920;
+	background: #4a4a4a;
+	height: 3rem;
+	width: 14rem;
+	margin-top: -22px;
+	padding: 10px 70px;
+	font-size: 50px;
+}
+.sk-title b{
+	font-size: 70px;
+}
+.sk-one{
+	margin-top: 30px;
+	margin: 10px;
+}
+.sk-two{
+	margin-bottom: 50px;
+}
+.myskill{
+	position: relative;
+	transition: all .5s ease-in;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	flex-direction: column;
+}
 
+.myskill div{
+	height: 288px;
+	width: 325px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+}
+.myskill .two{
+
+	display: none;
+	transition: all .5s ease-in;
+
+}
+.two div{
+	height: 288px;
+	width: 325px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.myskill img{
+	height: 150px;
+	width: 150px;
+}
+.msk-one{
+	background-color: #fff69a;
+	margin-left: -325px;
+}
+.msk-parent:hover{
+	transform: rotatey(180deg);
+	z-index: 2;
+}
+.msk-parent{
+	perspective: 1000px;
+	position: absolute;
+	transform-style: preserve-3d ;
+	z-index: 10;
+	transition: all 1s ease;
+
+	font-size: 20px;
+
+}
+.msk-child{
+	transform: rotatey(180deg);
+	z-index: 5;
+	position: absolute;
+	height: 288px;
+	width: 325px;
+	color: #4a4a4a;
+	opacity: 0.9;
+	box-sizing: border-box;
+	padding: 50px 50px;
+	font-size: 15px;
+}
+.msk-child div{
+width: 250px;
+}
+.msk-child div div{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+.msk-child img{
+	height: 20px;
+	width: 20px;
+}
+
+
+.msk-two{
+	background-color: #ffeb59;
+}
+.msk-three{
+	background-color: #ffd920;
+	margin-left: 325px;
+}
+.msk-one .msk-child{
+	background-color: #fff69a;
+}
+.msk-two .msk-child{
+	background-color: #ffeb59;
+}
+.msk-three .msk-child{
+	background-color: #ffd920;
+}
+.iconfont{
+	font-size: 136px;
+}
+.icon-css{
+	font-size: 500px;
+}
+.skill .bottom{
+	border: 2px solid #4a4a4a;
+	width: 92px;
+	height: 0;
+
+	position: absolute;
+	z-index: 10;
+	width: 321px;
+
+}
+
+.skill .triangle{
+	width:0;
+	height:0;
+	border-width:30px 30px 0;
+	border-style:solid;
+	border-color: #4a4a4a transparent transparent;/*灰 透明 透明 */
+	position:absolute;
+	z-index: 10;
+
+}
+.skill .top{
+	margin: -143px 0 0 0;
+	z-index: 15;
+}
+#show{
+	height: 25px;
+	align-items: center;
+	justify-content: flex-start;
+}
+/*我的项目*/
+.project{
+	background-color: #fffbfc;
+	margin-top: 100px;
+	height: 90rem;
+	z-index: 1;
+	position: absolute;
+
+	width: 100%;
+}
+.pro-box{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 220px;
+}
+.project .sk-title{
+	margin-top: 120px;
+}
+.project .sk-name{
+	background-color: #fffbfc;
+}

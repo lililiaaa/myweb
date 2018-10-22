@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>基于HTML5的3D翻转轮播幻灯片特效代码</title>
+<title>Miss婷的小网页</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <link rel="stylesheet" href="images/css/style.css" />
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_876200_egj1xcybd2b.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_876200_5jo62orac18.css">
 <script type='text/javascript' src='images/js/modernizr.min.js?ver=2.6.1'></script>
   <script src="images/js/jquery-3.3.1.min.js"></script>
 <script type='text/javascript'>
@@ -17,18 +17,34 @@ var CSSettings = {"pluginPath":"images"};
 <script type='text/javascript' src='images/js/cute.slider.js?ver=2.0.0'></script>
 <script type='text/javascript' src='images/js/cute.transitions.all.js?ver=2.0.0'></script>
   <style>
-
+    @font-face{
+      font-family:'Diamor';
+      src:url('images/font/Diamor.ttf') format('truetype');
+    }
+    @font-face{
+      font-family:'wild';
+      src:url('images/font/somethingwild-Regular.ttf') format('truetype');
+    }
+    @font-face{
+      font-family:'EL';
+      src:url('images/font/EL_Capitan.otf') format('opentype');
+    }
     .text{
       color: #404040;
       margin: 43px;
       z-index: 200;
+      font-family: 'Diamor';
+      display: flex;
+      flex-wrap: nowrap;
     }
     .text0{
-      font-weight: 700;
-      font-size: 80px;
+      margin: 43px 0 83px 0;
+      font-family: 'EL';
+      font-size: 6.5rem;
+      margin-bottom: 83px;
     }
     .text1{
-      font-size: 30px;
+      font-size: 63px;
     }
     .text2{
       font-size: 30px;
@@ -38,20 +54,23 @@ var CSSettings = {"pluginPath":"images"};
       font-size: 30px;
     }
     .mtn{
-      margin-top: -510px;
-      margin-left: 20%;
+      margin-top: -36.5rem;
+      margin-left: 19rem;
+      min-width:1009px;
       display: flex;
-
+      flex-wrap: nowrap;
       align-items: center;
       flex-direction: column;
       z-index: 10;
       position: absolute;
+      width: 62%;
     }
     .myname{
       transition:all .5s ease-in;
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 100%;
     }
     .myname:hover{
       border: 2px solid black;
@@ -59,8 +78,8 @@ var CSSettings = {"pluginPath":"images"};
       box-shadow: 0px 25px 25px 0 rgba(0, 0, 0, 0.72);
     }
     #nav-all{
-      margin-top: -667px;
-      margin-left: 183px;
+      margin-top: -45.7rem;
+      margin-left: 11rem;
       position: absolute;
       z-index: 200;
     }
@@ -106,9 +125,9 @@ var CSSettings = {"pluginPath":"images"};
     }
     .circle{
       position: absolute;
-      margin-top: -502px;
-      margin-left: 232px;
-      z-index: 100;
+      margin-top: -33rem;
+      margin-left: 8rem;
+      z-index: 500;
       height: 435px;
       border-left: 2px solid #ffd920;
     }
@@ -120,6 +139,7 @@ var CSSettings = {"pluginPath":"images"};
       width: 20px;
       margin: 43px;
       margin-left: -10px;
+      opacity: 1;
     }
     .circle .select-circle{
       background: black;
@@ -127,7 +147,8 @@ var CSSettings = {"pluginPath":"images"};
       margin-left: -17px;
     }
     .introduction .cir-two{
-      margin-top:209px ;
+      margin-top:50px ;
+      margin-left: 12rem;
     }
   </style>
 </head>
@@ -191,21 +212,29 @@ var CSSettings = {"pluginPath":"images"};
 <div class="mtn">
   <div class="myname">
     <div class="text text0">welcome to my blog!</div>
-    <div class="text text1">The footsteps of struggle never cease！</div>
+    <div class="text text1">The footsteps of struggle never cease</div>
     <div class="text text2">您好，我是李振婷</div>
     <div class="text text3">一个努力向上的前端学习者</div>
   </div>
 </div>
 <ul class="circle" id="circle">
-  <li class="select-circle"></li>
-  <li class=""></li>
-  <li class=""></li>
-  <li class=""></li>
-  <li class=""></li>
-  <li class=""></li>
+  <li class="select-circle" id="cir-one"></li>
+  <li class="" id="cir-two"></li>
+  <li class="" id="cir-three"></li>
+  <li class="" id="cir-four"></li>
+  <li class="" id="cir-five"></li>
+  <li class="" id="cir-six"></li>
 </ul>
 <script>
+    $('#cir-two').on('click',function () {
+    $(window).scrollTop(860)
+        $(this).removeClass('select-circle')
+        $('#cir-one').addClass('select-circle')
 
+    })
+    $('#cir-one').on('click',function () {
+        $(window).scrollTop(0)
+    })
   $("#header").on('mouseover',function () {
       $('#nav').slideDown()
   })
@@ -216,7 +245,7 @@ var CSSettings = {"pluginPath":"images"};
   $("#nav-all").on('mouseover',function () {
       $('#nav').css('display','block')
   })
-  $(".circle li").on('click',function () {
+  $(".circle li").on('mouseover',function () {
       $(this).addClass('select-circle').siblings().removeClass('select-circle')
   })
 
@@ -226,9 +255,15 @@ var CSSettings = {"pluginPath":"images"};
 </div>
 <!--个人介绍-->
 <div class="introduction">
+  <div class="sk-title in-title">
+    <div class="sk-line"></div>
+    <h1 class="sk-name in-name"><b>个</b>人简介</h1>
+    <div class="sk-one">There are always opportunities. If you can't grasp them, don't complain about them, just because you are not good enough; </div>
+    <div class="sk-two">don't treat time as garbage; only cherish time, can you improve the quality of life</div>
+  </div>
   <ul class="circle cir-two">
-    <li class=""></li>
-    <li class="select-circle"></li>
+    <li class="" id="cir-li-one"></li>
+    <li class="select-circle" id="cir-li-two"></li>
     <li class=""></li>
     <li class=""></li>
     <li class=""></li>
@@ -236,15 +271,21 @@ var CSSettings = {"pluginPath":"images"};
   </ul>
   <div class="box">
 
-      <div class="photo">
-        <div><img src="images/001/my01.JPG" alt=""></div>
-        <div class="phbox"></div>
+      <div class="photo" id="photo">
+        <div  class="myph"  id="myph">
+          <img src="images/001/my02.jpg" isclick="false" class="photo-left photo-small" id="photo-left" alt="">
+          <img src="images/001/my01.JPG" isclick="false" class="photo-big photo-middle" id="photo-middle" alt="">
+          <img src="images/001/my03.jpg" isclick="false" class="photo-right photo-small"  id="photo-right"  alt="">
+        </div>
+        <div class="phbox" id="phbox"></div>
       </div>
       <div class="mytext">
-        <h1>李振婷</h1>
+        <h1>Miss&nbsp李振婷</h1>
         <div>年龄：20</div>
+
+        <div>QQ：1123543277</div>
+        <div>联系方式：15504620218</div>
         <div>毕业院校：东北林业大学本科</div>
-        <div>联系方式：15504620218&nbsp&nbsp&nbspQQ:1123543277</div>
         <div>电子邮箱：1123543277@qq.com</div>
         <div class="a">github:&nbsp&nbsp&nbsp<a href="https://github.com/lililiaaa">https://github.com/lililiaaa</a></div>
         <a href="https://github.com/lililiaaa">
@@ -257,10 +298,173 @@ var CSSettings = {"pluginPath":"images"};
 
   </div>
   <script>
-      $(".cir-two li").on('click',function () {
+      $(".cir-two li").on('mouseover',function () {
           $(this).addClass('select-circle').siblings().removeClass('select-circle')
       })
+      $('#cir-li-two').on('click',function () {
+          $(window).scrollTop(1000)
+
+
+      })
+      $('#cir-li-one').on('click',function () {
+          $(window).scrollTop(0)
+          $(this).removeClass('select-circle')
+          $('#cir-li-two').addClass('select-circle')
+
+      })
+      $('#photo-middle').on('mouseover',function () {
+          $('#photo-left').fadeIn(1000)
+          $('#photo-right').fadeIn(1000)
+          $('#photo-middle').removeClass('photo-big').addClass('photo-small')
+          $('#phbox').css('width','780px')
+          $('#photo-left,#photo-right,#photo-middle').on('mouseover',function () {
+              $(this).css('opacity','0.5')
+          })
+          $('#photo-left,#photo-right,#photo-middle').on('mouseleave',function () {
+              $(this).css('opacity','1')
+          })
+
+          $('#photo-left,#photo-right,#photo-middle').on('click',function () {
+
+              $(this).removeClass('photo-small').addClass('photo-big')
+              $(this).siblings().fadeOut()
+              $('#phbox').css('width','480px')
+              $(this).css('opacity','1')
+
+              $(this).on('mouseover',function () {
+                  $(this).siblings().fadeIn()
+                  $(this).removeClass('photo-big').addClass('photo-small')
+                  $('#phbox').css('width','780px')
+              })
+          })
+
+      })
+
   </script>
 </div>
+<!--我的技能-->
+<div class="skill">
+  <div class="sk-title">
+    <div class="sk-line"></div>
+    <h1 class="sk-name"><b>个</b>人技能</h1>
+    <div class="sk-one">There are always opportunities. If you can't grasp them, don't complain about them, just because you are not good enough; </div>
+    <div class="sk-two">don't treat time as garbage; only cherish time, can you improve the quality of life</div>
+  </div>
+
+  <div class="myskill">
+    <div class="triangle top" id="top"></div>
+    <div class="scroll">
+    <div class="msk-one msk-parent">
+        <img src="images/bg/css3.png" alt="">
+        <h1>Html+Css</h1>
+      <div class="msk-child">
+        <div>
+        <div><img src="images/bg/星.png" alt=""><div>熟练掌握理解并运用html标签，css属性</div></div>
+        <div><img src="images/bg/星.png" alt=""><div>掌握html5新特性如：canvns,localStorage,navigator等</div></div>
+        <div><img src="images/bg/星.png" alt=""><div>掌握css3属性，可以通过动画@keyframes过渡transition等制作一些特性效果</div></div>
+      </div>
+    </div>
+    </div>
+    <div class="msk-two msk-parent">
+      <img src="images/bg/js.png" alt="">
+      <h1>JS</h1>
+      <div class="msk-child">
+        <div>
+        <div><img src="images/bg/星.png" alt=""><div>熟练掌握理解并运用html标签，css属性</div></div>
+        <div><img src="images/bg/星.png" alt=""><div>掌握html5新特性如：canvns,localStorage,navigator等</div></div>
+        <div><img src="images/bg/星.png" alt=""><div>掌握css3属性，可以通过动画@keyframes过渡transition等制作一些特性效果</div></div>
+      </div>
+      </div>
+    </div>
+    <div class="msk-three msk-parent">
+     <img src="images/bg/prog-jquery.png" alt="">
+      <h1>Jquery</h1>
+      <div class="msk-child">
+        <div>
+        <div><img src="images/bg/星.png" alt=""><div>熟练掌握理解并运用html标签，css属性</div></div>
+        <div><img src="images/bg/星.png" alt=""><div>掌握html5新特性如：canvns,localStorage,navigator等</div></div>
+        <div><img src="images/bg/星.png" alt=""><div>掌握css3属性，可以通过动画@keyframes过渡transition等制作一些特性效果</div></div>
+      </div>
+    </div>
+    </div>
+
+    </div>
+<div id="show" id="show">
+    <div class="bottom"></div>
+    <div class="triangle"></div>
+</div>
+    <div class="two" id="two">
+      <div class="msk-one msk-parent">
+        <img src="images/bg/css3.png" alt="">
+        <h1>Html+Css</h1>
+        <div class="msk-child">
+          <div>
+            <div><img src="images/bg/星.png" alt=""><div>熟练掌握理解并运用html标签，css属性</div></div>
+            <div><img src="images/bg/星.png" alt=""><div>掌握html5新特性如：canvns,localStorage,navigator等</div></div>
+            <div><img src="images/bg/星.png" alt=""><div>掌握css3属性，可以通过动画@keyframes过渡transition等制作一些特性效果</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="msk-two msk-parent">
+        <img src="images/bg/js.png" alt="">
+        <h1>JS</h1>
+        <div class="msk-child">
+          <div>
+            <div><img src="images/bg/星.png" alt=""><div>熟练掌握理解并运用html标签，css属性</div></div>
+            <div><img src="images/bg/星.png" alt=""><div>掌握html5新特性如：canvns,localStorage,navigator等</div></div>
+            <div><img src="images/bg/星.png" alt=""><div>掌握css3属性，可以通过动画@keyframes过渡transition等制作一些特性效果</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="msk-three msk-parent">
+        <img src="images/bg/prog-jquery.png" alt="">
+        <h1>Jquery</h1>
+        <div class="msk-child">
+          <div>
+            <div><img src="images/bg/星.png" alt=""><div>熟练掌握理解并运用html标签，css属性</div></div>
+            <div><img src="images/bg/星.png" alt=""><div>掌握html5新特性如：canvns,localStorage,navigator等</div></div>
+            <div><img src="images/bg/星.png" alt=""><div>掌握css3属性，可以通过动画@keyframes过渡transition等制作一些特性效果</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+    $('#show').on('click',function () {
+        $('#two').slideDown(1000)
+        $('#top,#show').hide()
+        $('#pro-box').css('margin-top','450px')
+        console.log('hhh')
+    })
+  </script>
+</div>
+<!--我的项目-->
+<div class="project">
+  <div class="pro-box" id="pro-box">
+  <div class="sk-title">
+    <div class="sk-line"></div>
+    <h1 class="sk-name"><b>个</b>人项目</h1>
+    <div class="sk-one">There are always opportunities. If you can't grasp them, don't complain about them, just because you are not good enough; </div>
+    <div class="sk-two">don't treat time as garbage; only cherish time, can you improve the quality of life</div>
+  </div>
+  <div class="myproject">
+    <div class="frist-line">
+      <div class="first-job">
+        <div class="bg">
+          <div class="title"><h1>树一树微信小程序</h1> <span>负责人</span> </div>
+
+          <text>树一树微信小程序通过线上的树屋主题模拟商场，激发用户使用兴趣，从而使用户通过完成任务的方式养成良好的学习，生活习惯；</text>
+        </div>
+        <div class="img"> </div>
+        <div class="icon"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<script>
+
+</script>
 </body>
 </html>
