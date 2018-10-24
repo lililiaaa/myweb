@@ -605,7 +605,7 @@ width: 250px;
 .project{
 	background-color: #fffbfc;
 	margin-top: 100px;
-	height: 90rem;
+	height: 100rem;
 	z-index: 1;
 	position: absolute;
 
@@ -622,4 +622,70 @@ width: 250px;
 }
 .project .sk-name{
 	background-color: #fffbfc;
+}
+.myproject{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 40px;
+}
+.project img{
+	height: 280px;
+	width: 235px;
+}
+.project .img{
+	margin-top: -291px;
+	margin-left: 254px;
+}
+.first-job .bg{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 305px;
+	padding-right: 135px;
+	width: 252px;
+	background-color: #505050;
+}
+.bg h1{
+	color: #ffd920;
+	font-size: 20px;
+	margin: 10px;
+}
+.bg span{
+	color: #ffd920;
+	font-size: 15px;
+	margin: 10px;
+}
+.bg text{
+	text-indent: 20px;
+	color: #a6a6a6;
+	font-size: 5px;
+	margin:10px;
+}
+.bg .title{
+	display: flex;
+}
+.frist-line{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-left: -111px;
+}
+.second-line{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-left: -111px;
+	margin-top: 335px;
+}
+.frist-line .img img{
+	position: absolute;
+}
+.job-two{
+	margin-left: 155px;
+}
+.img-show{
+	display: none;
 }
