@@ -7,7 +7,8 @@
 body{
 	background-color: #4a4a4a;
 	color:#555;
-
+	background-size: contain;
+	background-image: url("http://img.hb.aicdn.com/75bfc022d150dd22c9d3902b9cf53fded550260d23c6e-GZLZXJ_fw658");
 	-webkit-text-size-adjust:100%;
 	font-family: "微软雅黑";
 	font-size: 14px;
@@ -18,6 +19,7 @@ body{
 	margin-bottom: 50px;
 	margin:50px;
 	height: 100%;
+	
 }
 .body img {
 	border-style:none;
@@ -342,7 +344,9 @@ body a {
 
 /*个人介绍*/
 .introduction{
-	background-color: white;
+	background-image: url("http://img.hb.aicdn.com/d4b92a3a2128e83338764b8cf2613cdf7d29bbcc18378-ha1Ech_fw658") ;
+	background-repeat: no-repeat;
+	background-size: cover;
 	margin-top: 100px;
 	height: 65rem;
 }
@@ -354,7 +358,7 @@ body a {
 	font-size: 70px;
 }
 .introduction .in-name{
-	background: white;
+	/*background: white;*/
 }
 .box{
 	display: flex;
@@ -433,9 +437,13 @@ body a {
 }
 /*我的技能*/
 .skill{
-	background-color: #4a4a4a;
-	margin-top: 100px;
-	height: 17rem;
+	background-image: url("http://img.hb.aicdn.com/512828003dd844872806cf2664619e85cc7c0b58220ea-w6oUwU_fw658");
+	background-size: cover;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	padding-top: 100px;
+
+	height: 25rem;
 }
 .sk-title{
 	display: flex;
@@ -445,13 +453,21 @@ body a {
 	color: #a6a6a6;
 	padding-top: 50px;
 }
-.sk-line{
-	width: 70%;
+.sk-line1{
+	width: 30%;
 	border: 1px solid #ffd920;
+	margin-right: 56rem;
+
+}
+.sk-line2{
+	width: 30%;
+	border: 1px solid #ffd920;
+
+	margin-left: 54rem;
 }
 .sk-name{
 	color: #ffd920;
-	background: #4a4a4a;
+
 	height: 3rem;
 	width: 14rem;
 	margin-top: -22px;
@@ -601,14 +617,22 @@ width: 250px;
 	align-items: center;
 	justify-content: flex-start;
 }
+.skill .cir-three{
+	margin-top: 200px;
+	margin-left: 11.3rem;
+}
 /*我的项目*/
+.project .cir-four{
+	margin-top: 670px;
+	margin-left: 11.3rem;
+}
 .project{
 	background-color: #fffbfc;
-	margin-top: 100px;
+	background-image: url("http://img.hb.aicdn.com/d4b92a3a2128e83338764b8cf2613cdf7d29bbcc18378-ha1Ech_fw658")	;
 	height: 100rem;
 	z-index: 1;
 	position: absolute;
-
+	background-size: cover;
 	width: 100%;
 }
 .pro-box{
@@ -620,9 +644,7 @@ width: 250px;
 .project .sk-title{
 	margin-top: 120px;
 }
-.project .sk-name{
-	background-color: #fffbfc;
-}
+
 .myproject{
 	display: flex;
 	flex-direction: column;
@@ -631,12 +653,12 @@ width: 250px;
 	margin-top: 40px;
 }
 .project img{
-	height: 280px;
-	width: 235px;
+	height: 250px;
+	width: 205px;
 }
-.project .img{
-	margin-top: -291px;
-	margin-left: 254px;
+.img1,.img2,.img3,.img4{
+	margin-top: -279px;
+	margin-left: 261px;
 }
 .first-job .bg{
 	display: flex;
@@ -644,8 +666,9 @@ width: 250px;
 	justify-content: center;
 	align-items: center;
 	height: 305px;
-	padding-right: 135px;
+	padding-right: 117px;
 	width: 252px;
+
 	background-color: #505050;
 }
 .bg h1{
@@ -657,6 +680,9 @@ width: 250px;
 	color: #ffd920;
 	font-size: 15px;
 	margin: 10px;
+}
+.bg:hover{
+	background-color:#ffd920 ;
 }
 .bg text{
 	text-indent: 20px;
@@ -671,21 +697,70 @@ width: 250px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	margin-left: -111px;
+	margin-left: 36px;
 }
 .second-line{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	margin-left: -111px;
-	margin-top: 335px;
-}
-.frist-line .img img{
-	position: absolute;
+	margin-left: 42px;
+	margin-top: 72px;
 }
 .job-two{
-	margin-left: 155px;
+	margin-left: 75px;
 }
-.img-show{
+.project .img-show1,.project .img-show2,.project .img-show3,.project .img-show4{
 	display: none;
+	height: 250px;
+	width: 205px;;
+
+}
+.img-show1:hover{
+	transition: ALL 0.7s ease-in;
+	box-shadow:3px 3px 3px 3px #505050;
+	transform: scale(1.1);
+}
+.img-show4:hover{
+	transition: ALL 0.7s ease-in;
+	box-shadow:3px 3px 3px 3px #505050;
+	transform: scale(0.9);
+}
+.img-show2:hover{
+	transition: ALL 0.7s ease-in;
+	box-shadow:3px 3px 3px 3px #505050;
+	transform: rotate(360deg);
+
+}
+.img-show3:hover{
+	transition: ALL 0.7s ease-in;
+	box-shadow:3px 3px 3px 3px #505050;
+	transform: rotate(-360deg)
+}
+.img-hide1,.img-hide2,.img-hide3,.img-hide4{
+	display: block;
+
+}
+.project .icon{
+	height: 30px;
+	width: 103px;
+	background-color: #404040;
+	margin-top: 6px;
+	margin-left: 18px;
+	padding: 10px 5px 3px 10px;
+	color:  #ffd920;
+}
+.project .icon text{
+	font-size: 20px;
+	line-height: 20px;
+	margin-right: 5px;
+}
+/*我的荣誉*/
+.prize{
+	background-color: #404040;
+
+	height: 100rem;
+	z-index: 1;
+	position: absolute;
+	margin-top: 100rem;
+	width: 100%;
 }

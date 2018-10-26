@@ -28,6 +28,7 @@ var CSSettings = {"pluginPath":"images"};
     @font-face{
       font-family:'EL';
       src:url('images/font/EL_Capitan.otf') format('opentype');
+
     }
     .text{
       color: #404040;
@@ -79,7 +80,7 @@ var CSSettings = {"pluginPath":"images"};
     }
     #nav-all{
       margin-top: -45.7rem;
-      margin-left: 11rem;
+      margin-left: 5rem;
       position: absolute;
       z-index: 200;
     }
@@ -125,9 +126,10 @@ var CSSettings = {"pluginPath":"images"};
     }
     .circle{
       position: absolute;
-      margin-top: -33rem;
+      margin-top: -35rem;
       margin-left: 8rem;
       z-index: 500;
+      opacity: 0.5;
       height: 435px;
       border-left: 2px solid #ffd920;
     }
@@ -137,7 +139,7 @@ var CSSettings = {"pluginPath":"images"};
       border-radius: 50%;
       height: 20px;
       width: 20px;
-      margin: 43px;
+      margin: 53px;
       margin-left: -10px;
       opacity: 1;
     }
@@ -148,7 +150,7 @@ var CSSettings = {"pluginPath":"images"};
     }
     .introduction .cir-two{
       margin-top:50px ;
-      margin-left: 12rem;
+      margin-left: 11.3rem;
     }
   </style>
 </head>
@@ -223,17 +225,36 @@ var CSSettings = {"pluginPath":"images"};
   <li class="" id="cir-three"></li>
   <li class="" id="cir-four"></li>
   <li class="" id="cir-five"></li>
-  <li class="" id="cir-six"></li>
+
 </ul>
 <script>
+    $('#circle').on('mouseover',function () {
+        $(this).css('opacity','1')
+    })
+    $('#circle').on('mouseleave',function () {
+        $(this).css('opacity','0.5')
+    })
+    $('#cir-three').on('click',function () {
+        $(window).scrollTop(1900)
+        $(this).removeClass('select-circle')
+        $('#cir-one').addClass('select-circle')
+    })
+    $('#cir-four').on('click',function () {
+        $(window).scrollTop(2700)
+        $(this).removeClass('select-circle')
+        $('#cir-one').addClass('select-circle')
+    })
     $('#cir-two').on('click',function () {
-    $(window).scrollTop(860)
+    $(window).scrollTop(960)
         $(this).removeClass('select-circle')
         $('#cir-one').addClass('select-circle')
 
     })
     $('#cir-one').on('click',function () {
         $(window).scrollTop(0)
+    })
+    $(".circle li").on('mouseover',function () {
+        $(this).addClass('select-circle').siblings().removeClass('select-circle')
     })
   $("#header").on('mouseover',function () {
       $('#nav').slideDown()
@@ -245,9 +266,7 @@ var CSSettings = {"pluginPath":"images"};
   $("#nav-all").on('mouseover',function () {
       $('#nav').css('display','block')
   })
-  $(".circle li").on('mouseover',function () {
-      $(this).addClass('select-circle').siblings().removeClass('select-circle')
-  })
+
 
 
 </script>
@@ -256,18 +275,19 @@ var CSSettings = {"pluginPath":"images"};
 <!--个人介绍-->
 <div class="introduction">
   <div class="sk-title in-title">
-    <div class="sk-line"></div>
+    <div class="sk-line1"></div>
+    <div class="sk-line2"></div>
     <h1 class="sk-name in-name"><b>个</b>人简介</h1>
     <div class="sk-one">There are always opportunities. If you can't grasp them, don't complain about them, just because you are not good enough; </div>
     <div class="sk-two">don't treat time as garbage; only cherish time, can you improve the quality of life</div>
   </div>
-  <ul class="circle cir-two">
-    <li class="" id="cir-li-one"></li>
+  <ul class="circle cir-two" id="in-cir">
+    <li class="" id="cir-two-one"></li>
     <li class="select-circle" id="cir-li-two"></li>
+    <li class="" id="cir-two-three"></li>
+    <li class="" id="cir-two-four"></li>
     <li class=""></li>
-    <li class=""></li>
-    <li class=""></li>
-    <li class=""></li>
+
   </ul>
   <div class="box">
 
@@ -303,10 +323,26 @@ var CSSettings = {"pluginPath":"images"};
       })
       $('#cir-li-two').on('click',function () {
           $(window).scrollTop(1000)
+      })
 
+      $('#cir-two-three').on('click',function () {
+          $(window).scrollTop(1900)
+          $(this).removeClass('select-circle')
+          $('#cir-li-two').addClass('select-circle')
+      })
+      $('#cir-two-four').on('click',function () {
+          $(window).scrollTop(2700)
+          $(this).removeClass('select-circle')
+          $('#cir-li-two').addClass('select-circle')
+      })
+      $('#in-cir').on('mouseover',function () {
+          $(this).css('opacity','1')
+      })
+      $('#in-cir').on('mouseleave',function () {
+          $(this).css('opacity','0.5')
 
       })
-      $('#cir-li-one').on('click',function () {
+      $('#cir-two-one').on('click',function () {
           $(window).scrollTop(0)
           $(this).removeClass('select-circle')
           $('#cir-li-two').addClass('select-circle')
@@ -344,8 +380,16 @@ var CSSettings = {"pluginPath":"images"};
 </div>
 <!--我的技能-->
 <div class="skill">
+  <ul class="circle cir-three" id="sk-cir">
+    <li class="" id="cir-three-one"></li>
+    <li class="" id="cir-three-two"></li>
+    <li class="select-circle" id="cir-li-three"></li>
+    <li class=""  id="cir-three-four"></li>
+    <li class="" id=""></li>
+  </ul>
   <div class="sk-title">
-    <div class="sk-line"></div>
+    <div class="sk-line1"></div>
+    <div class="sk-line2"></div>
     <h1 class="sk-name"><b>个</b>人技能</h1>
     <div class="sk-one">There are always opportunities. If you can't grasp them, don't complain about them, just because you are not good enough; </div>
     <div class="sk-two">don't treat time as garbage; only cherish time, can you improve the quality of life</div>
@@ -370,9 +414,9 @@ var CSSettings = {"pluginPath":"images"};
       <h1>JS</h1>
       <div class="msk-child">
         <div>
-        <div><img src="images/bg/星.png" alt=""><div>熟练掌握理解并运用html标签，css属性</div></div>
-        <div><img src="images/bg/星.png" alt=""><div>掌握html5新特性如：canvns,localStorage,navigator等</div></div>
-        <div><img src="images/bg/星.png" alt=""><div>掌握css3属性，可以通过动画@keyframes过渡transition等制作一些特性效果</div></div>
+        <div><img src="images/bg/星.png" alt=""><div>熟熟练掌握js基础能运用js实现页面交互。</div></div>
+        <div><img src="images/bg/星.png" alt=""><div>熟系ajax工作原理，能用ajax与后台进行数据交互。 </div></div>
+        <div><img src="images/bg/星.png" alt=""><div>熟系ES6基本语法，webpack打包工具。</div></div>
       </div>
       </div>
     </div>
@@ -381,9 +425,9 @@ var CSSettings = {"pluginPath":"images"};
       <h1>Jquery</h1>
       <div class="msk-child">
         <div>
-        <div><img src="images/bg/星.png" alt=""><div>熟练掌握理解并运用html标签，css属性</div></div>
-        <div><img src="images/bg/星.png" alt=""><div>掌握html5新特性如：canvns,localStorage,navigator等</div></div>
-        <div><img src="images/bg/星.png" alt=""><div>掌握css3属性，可以通过动画@keyframes过渡transition等制作一些特性效果</div></div>
+        <div><img src="images/bg/星.png" alt=""><div>熟练掌握jquery，并能够使用jquery实现动态交互，</div></div>
+        <div><img src="images/bg/星.png" alt=""><div>熟系但不依赖bootstarp UI库</div></div>
+        <div><img src="images/bg/星.png" alt=""><div>能实现响应式布局，实现移动端操作。</div></div>
       </div>
     </div>
     </div>
@@ -395,35 +439,35 @@ var CSSettings = {"pluginPath":"images"};
 </div>
     <div class="two" id="two">
       <div class="msk-one msk-parent">
-        <img src="images/bg/css3.png" alt="">
-        <h1>Html+Css</h1>
+        <img src="images/bg/vuejs.png" alt="">
+        <h1>Vue</h1>
         <div class="msk-child">
           <div>
-            <div><img src="images/bg/星.png" alt=""><div>熟练掌握理解并运用html标签，css属性</div></div>
-            <div><img src="images/bg/星.png" alt=""><div>掌握html5新特性如：canvns,localStorage,navigator等</div></div>
-            <div><img src="images/bg/星.png" alt=""><div>掌握css3属性，可以通过动画@keyframes过渡transition等制作一些特性效果</div></div>
+            <div><img src="images/bg/星.png" alt=""><div>熟练掌握js基础能运用js实现页面交互。</div></div>
+            <div><img src="images/bg/星.png" alt=""><div>熟练vue框架及vue双向绑定，有vue开发经验</div></div>
+            <div><img src="images/bg/星.png" alt=""><div>能用iview组件库进行页面布局。</div></div>
           </div>
         </div>
       </div>
       <div class="msk-two msk-parent">
-        <img src="images/bg/js.png" alt="">
-        <h1>JS</h1>
+        <img src="images/bg/node-js.png" alt="">
+        <h1>Node.js</h1>
         <div class="msk-child">
           <div>
-            <div><img src="images/bg/星.png" alt=""><div>熟练掌握理解并运用html标签，css属性</div></div>
-            <div><img src="images/bg/星.png" alt=""><div>掌握html5新特性如：canvns,localStorage,navigator等</div></div>
-            <div><img src="images/bg/星.png" alt=""><div>掌握css3属性，可以通过动画@keyframes过渡transition等制作一些特性效果</div></div>
+            <div><img src="images/bg/星.png" alt=""><div>熟练掌握理解并运用node.js基本语法</div></div>
+            <div><img src="images/bg/星.png" alt=""><div>能够使用node.js做中间层</div></div>
+
           </div>
         </div>
       </div>
       <div class="msk-three msk-parent">
-        <img src="images/bg/prog-jquery.png" alt="">
-        <h1>Jquery</h1>
+        <img src="images/bg/php.png" alt="">
+        <h1>Php</h1>
         <div class="msk-child">
           <div>
-            <div><img src="images/bg/星.png" alt=""><div>熟练掌握理解并运用html标签，css属性</div></div>
-            <div><img src="images/bg/星.png" alt=""><div>掌握html5新特性如：canvns,localStorage,navigator等</div></div>
-            <div><img src="images/bg/星.png" alt=""><div>掌握css3属性，可以通过动画@keyframes过渡transition等制作一些特性效果</div></div>
+            <div><img src="images/bg/星.png" alt=""><div>了解php后端语言</div></div>
+            <div><img src="images/bg/星.png" alt=""><div>能用php连接数据库，实现基础后端操作</div></div>
+            <div><img src="images/bg/星.png" alt=""><div>能使用git进行团队开发，掌握ps基础能够用ps进行切图，简单界面设计</div></div>
           </div>
         </div>
       </div>
@@ -431,19 +475,61 @@ var CSSettings = {"pluginPath":"images"};
     </div>
   </div>
   <script>
+      $("#sk-cir li").on('mouseover',function () {
+          $(this).addClass('select-circle').siblings().removeClass('select-circle')
+      })
+      $('#cir-three-two').on('click',function () {
+          $(window).scrollTop(1000)
+          $(this).removeClass('select-circle')
+          $('#cir-li-three').addClass('select-circle')
+      })
+
+      $('#cir-li-three').on('click',function () {
+          $(window).scrollTop(1900)
+
+      })
+      $('#cir-three-four').on('click',function () {
+          $(window).scrollTop(2700)
+          $(this).removeClass('select-circle')
+          $('#cir-li-three').addClass('select-circle')
+      })
+      $('#sk-cir').on('mouseover',function () {
+          $(this).css('opacity','1')
+      })
+      $('#sk-cir').on('mouseleave',function () {
+          $(this).css('opacity','0.5')
+
+      })
+      $('#cir-three-one').on('click',function () {
+          $(window).scrollTop(0)
+          $(this).removeClass('select-circle')
+          $('#cir-li-three').addClass('select-circle')
+
+      })
     $('#show').on('click',function () {
         $('#two').slideDown(1000)
         $('#top,#show').hide()
         $('#pro-box').css('margin-top','450px')
+        $('#sk-cir').css('margin-top','320px')
+        $('#pro-cir').css('margin-top','940px')
         console.log('hhh')
     })
   </script>
 </div>
 <!--我的项目-->
 <div class="project">
+  <ul class="circle cir-four" id="pro-cir">
+    <li class="" id="cir-four-one"></li>
+    <li class="" id="cir-four-two"></li>
+    <li class="" id="cir-four-three"></li>
+    <li class="select-circle" id="cir-li-four"></li>
+    <li class=""></li>
+
+  </ul>
   <div class="pro-box" id="pro-box">
   <div class="sk-title">
-    <div class="sk-line"></div>
+    <div class="sk-line1"></div>
+    <div class="sk-line2"></div>
     <h1 class="sk-name"><b>个</b>人项目</h1>
     <div class="sk-one">There are always opportunities. If you can't grasp them, don't complain about them, just because you are not good enough; </div>
     <div class="sk-two">don't treat time as garbage; only cherish time, can you improve the quality of life</div>
@@ -451,49 +537,165 @@ var CSSettings = {"pluginPath":"images"};
   <div class="myproject">
     <div class="frist-line">
       <div class="first-job">
-        <div class="bg">
+        <div class="bg " id="bg1">
           <div class="title"><h1>树一树微信小程序</h1> <span>负责人</span> </div>
 
           <text>树一树微信小程序通过线上的树屋主题模拟商场，激发用户使用兴趣，从而使用户通过完成任务的方式养成良好的学习，生活习惯；</text>
         </div>
-        <div class="img"><img class="img-show" src="images/001/shu.png" alt=""><img src="images/001/shu2.png" alt=""></div>
-        <div class="icon"></div>
+        <div class="img1"><img class="img-show1" src="images/001/shu.png" alt=""><img src="images/001/shu2.png" class="img-hide1" alt=""></div>
+        <div class="icon">
+          <text>查看详情</text><i class="iconfont icon-icon1"></i>
+        </div>
       </div>
       <div class="first-job job-two">
-        <div class="bg">
+        <div class="bg" id="bg2">
           <div class="title"><h1>树一树微信小程序</h1> <span>负责人</span> </div>
 
           <text>树一树微信小程序通过线上的树屋主题模拟商场，激发用户使用兴趣，从而使用户通过完成任务的方式养成良好的学习，生活习惯；</text>
         </div>
-        <div class="img"><img src="images/001/shu.png" alt=""><img src="images/001/shu2.png" alt=""></div>
-        <div class="icon"></div>
+        <div class="img2"><img class="img-show2" src="images/001/shu.png" alt=""><img src="images/001/shu2.png" class="img-hide2" alt=""></div>
+        <div class="icon">
+          <text>查看详情</text><i class="iconfont icon-icon1"></i>
+        </div>
       </div>
     </div>
     <div class="frist-line second-line">
       <div class="first-job">
-        <div class="bg">
-          <div class="title"><h1>树一树微信小程序</h1> <span>负责人</span> </div>
+        <div class="bg" id="bg3">
+          <div class="title"><h1>vue移动端app</h1> <span>个人项目</span> </div>
 
-          <text>树一树微信小程序通过线上的树屋主题模拟商场，激发用户使用兴趣，从而使用户通过完成任务的方式养成良好的学习，生活习惯；</text>
+          <text>自己实现了一个浏览音乐，电影功能的移动端。使用html,css,h5,c3实现前端页面，使用js实现页面交互，使用vue框架进行开发，使用webpack包</text>
         </div>
-        <div class="img"><img class="img-show" src="images/001/shu.png" alt=""><img src="images/001/shu2.png" alt=""></div>
-        <div class="icon"></div>
+        <div class="img3"><img class="img-show3" src="images/001/shu.png" alt=""><img src="images/001/shu2.png" class="img-hide3" alt=""></div>
+        <div class="icon">
+          <text>查看详情</text><i class="iconfont icon-icon1"></i>
+        </div>
       </div>
       <div class="first-job job-two">
-        <div class="bg">
-          <div class="title"><h1>树一树微信小程序</h1> <span>负责人</span> </div>
+        <div class="bg" id="bg4">
+          <div class="title"><h1>仿星巴克首页</h1> <span>负责人</span> </div>
 
-          <text>树一树微信小程序通过线上的树屋主题模拟商场，激发用户使用兴趣，从而使用户通过完成任务的方式养成良好的学习，生活习惯；</text>
+          <text>使用html,css实现静态页面，使用h5,css3实现动态效果，利用js,jquery实现前端页面交互。使用响应式布局，有移动端，PC端等三种布局方式；</text>
         </div>
-        <div class="img"><img src="images/001/shu.png" alt=""><img src="images/001/shu2.png" alt=""></div>
-        <div class="icon"></div>
+        <div class="img4" ><img class="img-show4" src="images/001/shu.png" alt=""><img src="images/001/shu2.png" class="img-hide4" alt=""></div>
+        <div class="icon">
+          <text>查看详情</text><i class="iconfont icon-icon1"></i>
+        </div>
       </div>
     </div>
   </div>
   </div>
   <script>
 
+      $('#bg1').on('mouseover',function () {
+          $('#bg1 h1').css('color','#505050')
+          $('#bg1 span').css('color','#505050')
+          $('#bg1 text').css('color','#505050')
+      })
+      $('#bg1').on('mouseleave',function () {
+          $('#bg1 h1').css('color','#ffd920')
+          $('#bg1 span').css('color','#ffd920')
+          $('#bg1 text').css('color','#909090')
+      })
+      $('#bg2').on('mouseover',function () {
+          $('#bg2 h1').css('color','#505050')
+          $('#bg2 span').css('color','#505050')
+          $('#bg2 text').css('color','#505050')
+      })
+      $('#bg2').on('mouseleave',function () {
+          $('#bg2 h1').css('color','#ffd920')
+          $('#bg2 span').css('color','#ffd920')
+          $('#bg2 text').css('color','#909090')
+      })
+      $('#bg3').on('mouseover',function () {
+          $('#bg3 h1').css('color','#505050')
+          $('#bg3 span').css('color','#505050')
+          $('#bg3 text').css('color','#505050')
+      })
+      $('#bg3').on('mouseleave',function () {
+          $('#bg3 h1').css('color','#ffd920')
+          $('#bg3 span').css('color','#ffd920')
+          $('#bg3 text').css('color','#909090')
+      })
+      $('#bg4').on('mouseover',function () {
+          $('#bg4 h1').css('color','#505050')
+          $('#bg4 span').css('color','#505050')
+          $('#bg4 text').css('color','#505050')
+      })
+      $('#bg4').on('mouseleave',function () {
+          $('#bg4 h1').css('color','#ffd920')
+          $('#bg4 span').css('color','#ffd920')
+          $('#bg4 text').css('color','#909090')
+      })
+      $('.myproject .img1').on('mouseover',function () {
+          $('.img-hide1').css('display','none')
+          $('.img-show1').css('display','block')
+      })
+      $('.myproject .img1').on('mouseleave',function () {
+          $('.img-show1').css('display','none')
+          $('.img-hide1').css('display','block')
+      })
+      $('.myproject .img2').on('mouseover',function () {
+          $('.img-hide2').css('display','none')
+          $('.img-show2').css('display','block')
+      })
+      $('.myproject .img2').on('mouseleave',function () {
+          $('.img-show2').css('display','none')
+          $('.img-hide2').css('display','block')
+      })
+      $('.myproject .img3').on('mouseover',function () {
+          $('.img-hide3').css('display','none')
+          $('.img-show3').css('display','block')
+      })
+      $('.myproject .img3').on('mouseleave',function () {
+          $('.img-show3').css('display','none')
+          $('.img-hide3').css('display','block')
+      })
+      $('.myproject .img4').on('mouseover',function () {
+          $('.img-hide4').css('display','none')
+          $('.img-show4').css('display','block')
+      })
+      $('.myproject .img4').on('mouseleave',function () {
+          $('.img-show4').css('display','none')
+          $('.img-hide4').css('display','block')
+      })
+      $("#pro-cir li").on('mouseover',function () {
+          $(this).addClass('select-circle').siblings().removeClass('select-circle')
+      })
+      $('#cir-four-two').on('click',function () {
+          $(window).scrollTop(1000)
+          $(this).removeClass('select-circle')
+          $('#cir-li-four').addClass('select-circle')
+      })
+
+      $('#cir-four-three').on('click',function () {
+          $(window).scrollTop(1900)
+          $(this).removeClass('select-circle')
+          $('#cir-li-four').addClass('select-circle')
+
+      })
+      $('#cir-li-four').on('click',function () {
+          $(window).scrollTop(2700)
+
+      })
+      $('#pro-cir').on('mouseover',function () {
+          $(this).css('opacity','1')
+      })
+      $('#pro-cir').on('mouseleave',function () {
+          $(this).css('opacity','0.5')
+
+      })
+      $('#cir-four-one').on('click',function () {
+          $(window).scrollTop(0)
+          $(this).removeClass('select-circle')
+          $('#cir-li-four').addClass('select-circle')
+
+      })
   </script>
+</div>
+<!--我的荣誉-->
+<div class="prize">
+
 </div>
 <script>
 
