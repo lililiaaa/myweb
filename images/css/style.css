@@ -756,11 +756,37 @@ width: 250px;
 }
 /*我的荣誉*/
 .prize{
-	background-color: #404040;
-
-	height: 100rem;
+	background-image: url("http://img.hb.aicdn.com/75bfc022d150dd22c9d3902b9cf53fded550260d23c6e-GZLZXJ_fw658");
+	background-size: cover;
+	background-position: 50%;
+	height: 77rem;
 	z-index: 1;
 	position: absolute;
 	margin-top: 100rem;
 	width: 100%;
+}
+.fang img{
+	margin-top: 260px;
+	margin-left: 319px;
+	width: 32rem;
+	height: 32rem;
+	transform: rotate(-45deg);
+}
+.myprz{
+	height: 22.3rem;
+	width: 22.3rem;
+	border: 4px solid white;
+	margin-top: -27.3rem;
+	margin-left: 24.5rem;
+	position: absolute;
+	z-index: 5;
+}
+.prize .cir-five{
+
+
+	margin-top: 306px;
+	margin-left: 11.3rem;
+}
+.prize .sk-title{
+	margin-top: 150px;
 }
