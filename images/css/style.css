@@ -766,7 +766,7 @@ width: 250px;
 	width: 100%;
 }
 .fang img{
-	margin-top: 260px;
+	margin-top: 126px;
 	margin-left: 319px;
 	width: 32rem;
 	height: 32rem;
@@ -784,9 +784,41 @@ width: 250px;
 .prize .cir-five{
 
 
-	margin-top: 306px;
+	margin-top: 564px;
 	margin-left: 11.3rem;
 }
 .prize .sk-title{
-	margin-top: 150px;
+	margin-top: 120px;
+	margin-bottom: 60px;
+}
+.time{
+	color: #ffffff;
+	font-size: 45px;
+	font-family: "Bookman Old Style";
+	position: absolute;
+}
+
+.time-one{
+	margin-top: 92px;
+	margin-left: 879px;
+}
+.time-two{
+	margin-top: -153px;
+	margin-left: 1048px;
+}
+.time-three{
+	margin-top: -143px;
+	margin-left: 1207px;
+}
+.time-four{
+	margin-top: -167px;
+	margin-left: 1392px;
+}
+.time-five{
+	margin-top: -182px;
+	margin-left: 1095px;
+}
+.time-six{
+	margin-top: -174px;
+	margin-left: 811px;
 }
