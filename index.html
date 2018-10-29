@@ -695,6 +695,8 @@ var CSSettings = {"pluginPath":"images"};
 </div>
 <!--我的荣誉-->
 <div class="prize">
+
+  <div class="show">
   <ul class="circle cir-five" id="prz-cir">
     <li class="" id="cir-five-one"></li>
     <li class="" id="cir-five-two"></li>
@@ -706,25 +708,156 @@ var CSSettings = {"pluginPath":"images"};
   <div class="sk-title">
     <div class="sk-line1"></div>
     <div class="sk-line2"></div>
-    <h1 class="sk-name"><b>个</b>人技能</h1>
+    <h1 class="sk-name"><b>个</b>人奖项</h1>
     <div class="sk-one">There are always opportunities. If you can't grasp them, don't complain about them, just because you are not good enough; </div>
     <div class="sk-two">don't treat time as garbage; only cherish time, can you improve the quality of life</div>
   </div>
   <div class="prz-bg">
     <div class="fang">
       <img src="images/bg/fang.png" alt="">
-      <div class="myprz"></div>
+      <div class="myprz">
+
+        <div class="prz-text">
+          <div class="prz-one text-show" > <h1>互联网+省赛</h1><text>------------黑龙江省互联网+创新创业大赛三等奖</text></div>
+          <div class="prz-two"><h1>互联网+校赛</h1><text>------------互联网+创新创业大赛校赛新星奖</text></div>
+          <div class="prz-three"><h1>小程序东北赛</h1><text>------------腾讯微信小程序开发大赛东北赛区二等奖</text></div>
+          <div class="prz-four"><h1>小程序校赛</h1><text>------------东北林业大学微信小程序开发大赛一等奖</text></div>
+          <div class="prz-five"><h1>奖学金</h1><text>------------获得鑫联华奖学金</text></div>
+          <div class="prz-six"><h1>证书</h1><text>------------国家级一星志愿者证书，优秀志愿者证书</text></div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="time">
-    <div class="time-one">2017</div>
-    <div class="time-two">2018</div>
-    <div class="time-three">2018.05</div>
-    <div class="time-four">2018.06</div>
-    <div class="time-five">2018.06</div>
-    <div class="time-six">2018.09</div>
+    <div class="time-one">2017 <img src="images/bg/1.png" alt=""></div>
+    <div class="time-two">2018 <img src="images/bg/2.png" alt=""></div>
+    <div class="time-three">2018.05 <img src="images/bg/3.png" alt=""></div>
+    <div class="time-four">2018.06 <img src="images/bg/4.png" alt=""></div>
+    <div class="time-five">2018.06 <img src="images/bg/6.png" alt=""></div>
+    <div class="time-six">2018.09 <img src="images/bg/5.png" alt=""></div>
+  </div>
+  </div>
+  <div class="prz-hide">
+    <div class="hideprz">
+      <div id="prz1"><img class="bg" src="images/bg/5.png" alt="">
+        <img class="img" src="images/001/prz1.JPG" alt="">
+      </div>
+      <div id="prz2"><img class="bg" src="images/bg/6.png" alt="">
+        <img class="img" src="images/001/prz2.JPG" alt="">
+      </div>
+      <div id="prz3"><img class="bg" src="images/bg/4.png" alt="">
+        <img class="img" src="images/001/prz3.JPG" alt="">
+      </div>JPG
+      <div id="prz4"><img class="bg" src="images/bg/3.png" alt="">
+        <img class="img" src="images/001/prz4.JPG" alt="">
+      </div>
+      <div id="prz5"><img class="bg" src="images/bg/2.png" alt="">
+        <text>奖学金</text>
+      </div>
+        <div id="prz6">
+          <div><img class="bg" src="images/bg/1.png" alt="">
+          <img class="img" src="images/001/prz5.1.JPG" alt="">
+          </div>
+          <div><img class="bg" src="images/bg/1.png" alt="">
+            <img class="img" src="images/001/prz5.2.JPG" alt="">
+          </div>
+          <div><img class="bg" src="images/bg/1.png" alt="">
+            <img class="img" src="images/001/prz5.3.JPG" alt="">
+          </div>
+          <div><img class="bg" src="images/bg/1.png" alt="">
+            <img class="img" src="images/001/prz5.4.JPG" alt="">
+          </div>
+        </div>
+
+    </div>
+    <img class="wrong" id="wrong" src="images/bg/错号.png" alt="">
+  </div>
+  <div>
+
   </div>
 
+  <script>
+    $('.time-six').on('click',function () {
+        $('.prz-hide').css('visibility','visible')
+        $('#prz1').show().siblings().hide()
+    })
+    $('.time-five').on('click',function () {
+        $('.prz-hide').css('visibility','visible')
+        $('#prz2').show().siblings().hide()
+    })
+    $('.time-four').on('click',function () {
+        $('.prz-hide').css('visibility','visible')
+        $('#prz3').show().siblings().hide()
+    })
+    $('.time-three').on('click',function () {
+        $('.prz-hide').css('visibility','visible')
+        $('#prz4').show().siblings().hide()
+    })
+    $('.time-two').on('click',function () {
+        $('.prz-hide').css('visibility','visible')
+        $('#prz5').show().siblings().hide()
+    })
+    $('.time-one').on('click',function () {
+        $('.prz-hide').css('visibility','visible')
+        $('#prz6').show().siblings().hide()
+    })
+    $('#wrong').on('click',function () {
+        $('.prz-hide').css('visibility','hidden')
+    })
+    $('.time-one').on('mouseover',function () {
+        $('.time-one img').fadeIn(500);
+
+        $('.prz-six').addClass('text-show')
+        $('.prz-six').siblings().removeClass('text-show')
+
+    })
+    $('.time-two').on('mouseover',function () {
+        $('.time-two img').fadeIn(500);
+        $('.prz-five').addClass('text-show')
+        $('.prz-five').siblings().removeClass('text-show')
+    })
+    $('.time-three').on('mouseover',function () {
+        $('.time-three img').fadeIn(500);
+        $('.prz-four').siblings().removeClass('text-show')
+        $('.prz-four').addClass('text-show')
+    })
+    $('.time-four').on('mouseover',function () {
+        $('.time-four img').fadeIn(500);
+        $('.prz-three').siblings().removeClass('text-show')
+        $('.prz-three').addClass('text-show')
+    })
+    $('.time-five').on('mouseover',function () {
+        $('.time-five img').fadeIn(500);
+        $('.prz-two').siblings().removeClass('text-show')
+        $('.prz-two').addClass('text-show')
+
+    })
+    $('.time-six').on('mouseover',function () {
+        $('.time-six img').fadeIn(500);
+        $('.prz-one').siblings().removeClass('text-show')
+        $('.prz-one').addClass('text-show')
+
+    })
+    $('.time-six').on('mouseleave',function () {
+        $('.time-six img').fadeOut(500);
+    })
+    $('.time-one').on('mouseleave',function () {
+        $('.time-one img').fadeOut(500);
+    })
+    $('.time-two').on('mouseleave',function () {
+        $('.time-two img').fadeOut(500);
+    })
+    $('.time-three').on('mouseleave',function () {
+        $('.time-three img').fadeOut(500);
+    })
+    $('.time-four').on('mouseleave',function () {
+        $('.time-four img').fadeOut(500);
+    })
+    $('.time-five').on('mouseleave',function () {
+        $('.time-five img').fadeOut(500);
+    })
+
+  </script>
 </div>
 <script>
 

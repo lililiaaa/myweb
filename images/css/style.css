@@ -1,4 +1,5 @@
 /* Div */
+
 *{
 	margin: 0;
 	padding: 0;
@@ -681,7 +682,7 @@ width: 250px;
 	font-size: 15px;
 	margin: 10px;
 }
-.bg:hover{
+.project .bg:hover{
 	background-color:#ffd920 ;
 }
 .bg text{
@@ -780,11 +781,10 @@ width: 250px;
 	margin-left: 24.5rem;
 	position: absolute;
 	z-index: 5;
+	color: white;
 }
 .prize .cir-five{
-
-
-	margin-top: 564px;
+	margin-top: 444px;
 	margin-left: 11.3rem;
 }
 .prize .sk-title{
@@ -793,11 +793,19 @@ width: 250px;
 }
 .time{
 	color: #ffffff;
-	font-size: 45px;
+	font-size: 35px;
 	font-family: "Bookman Old Style";
 	position: absolute;
 }
-
+.time div{
+	width: 150px;
+}
+.prize .time img{
+	display: none;
+	width: 268px;
+	height: 225px;
+	position: absolute;
+}
 .time-one{
 	margin-top: 92px;
 	margin-left: 879px;
@@ -821,4 +829,92 @@ width: 250px;
 .time-six{
 	margin-top: -174px;
 	margin-left: 811px;
+}
+
+.time-one img{
+	margin-top: -109px;
+	margin-left: -188px;
+}
+.time-two img{
+	margin-top: -114px;
+	margin-left: -177px;
+}
+.time-three img{
+	margin-top: -130px;
+	margin-left: -63px;
+}
+.time-four img{
+	margin-top: -132px;
+	margin-left: -64px;
+}
+.time-five img{
+	margin-top: -139px;
+	margin-left: -65px;
+}
+.time-six img{
+	margin-top: -124px;
+	margin-left: -67px;
+}
+.prz-text{
+	font-family: 'Diamor';
+	font-size: 30px;
+
+}
+.prz-text h1{
+	margin: 115px 28px;
+	font-size: 50px;
+}
+.prz-text text{
+	font-size: 20px;
+}
+.prz-text div{
+	display: none;
+	position: absolute;
+}
+.prz-text .text-show{
+	display: block;
+}
+.prz-hide{
+	visibility: hidden;
+
+	height: 77rem;
+	z-index: 510;
+	background-color: rgba(17,17,17,0.9);
+	position: absolute;
+	margin-top: -64rem;
+	width: 100%;
+
+}
+.prz-hide div{
+	height: 77rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.prz-hide .bg{
+	margin: 0 100px;
+	width: 1300px;
+	height: 1235px;
+	position: absolute;
+	z-index: 50;
+}
+.prz-hide .img{
+	width: 639px;
+	position: absolute;
+	margin-top: 470px;
+	margin-left: 439px;
+	height: 355px;
+}
+.hideprz div{
+	display: none;
+}
+.prz-hide .wrong{
+	z-index: 50;
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	margin-top: -850px;
+	margin-left: 1350px;
 }
