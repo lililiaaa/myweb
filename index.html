@@ -240,7 +240,12 @@ var CSSettings = {"pluginPath":"images"};
         $('#cir-one').addClass('select-circle')
     })
     $('#cir-four').on('click',function () {
-        $(window).scrollTop(2700)
+        $(window).scrollTop(2900)
+        $(this).removeClass('select-circle')
+        $('#cir-one').addClass('select-circle')
+    })
+    $('#cir-five').on('click',function () {
+        $(window).scrollTop(4400)
         $(this).removeClass('select-circle')
         $('#cir-one').addClass('select-circle')
     })
@@ -286,7 +291,7 @@ var CSSettings = {"pluginPath":"images"};
     <li class="select-circle" id="cir-li-two"></li>
     <li class="" id="cir-two-three"></li>
     <li class="" id="cir-two-four"></li>
-    <li class=""></li>
+    <li class="" id="cir-two-five"></li>
 
   </ul>
   <div class="box">
@@ -331,7 +336,12 @@ var CSSettings = {"pluginPath":"images"};
           $('#cir-li-two').addClass('select-circle')
       })
       $('#cir-two-four').on('click',function () {
-          $(window).scrollTop(2700)
+          $(window).scrollTop(2900)
+          $(this).removeClass('select-circle')
+          $('#cir-li-two').addClass('select-circle')
+      })
+      $('#cir-two-five').on('click',function () {
+          $(window).scrollTop(4400)
           $(this).removeClass('select-circle')
           $('#cir-li-two').addClass('select-circle')
       })
@@ -385,7 +395,7 @@ var CSSettings = {"pluginPath":"images"};
     <li class="" id="cir-three-two"></li>
     <li class="select-circle" id="cir-li-three"></li>
     <li class=""  id="cir-three-four"></li>
-    <li class="" id=""></li>
+    <li class="" id="cir-three-five"></li>
   </ul>
   <div class="sk-title">
     <div class="sk-line1"></div>
@@ -489,7 +499,12 @@ var CSSettings = {"pluginPath":"images"};
 
       })
       $('#cir-three-four').on('click',function () {
-          $(window).scrollTop(2700)
+          $(window).scrollTop(2900)
+          $(this).removeClass('select-circle')
+          $('#cir-li-three').addClass('select-circle')
+      })
+      $('#cir-three-five').on('click',function () {
+          $(window).scrollTop(4400)
           $(this).removeClass('select-circle')
           $('#cir-li-three').addClass('select-circle')
       })
@@ -523,7 +538,7 @@ var CSSettings = {"pluginPath":"images"};
     <li class="" id="cir-four-two"></li>
     <li class="" id="cir-four-three"></li>
     <li class="select-circle" id="cir-li-four"></li>
-    <li class=""></li>
+    <li class="" id="cir-four-five"></li>
 
   </ul>
   <div class="pro-box" id="pro-box">
@@ -675,7 +690,19 @@ var CSSettings = {"pluginPath":"images"};
 
       })
       $('#cir-li-four').on('click',function () {
-          $(window).scrollTop(2700)
+          $(window).scrollTop(2900)
+
+      })
+      $('#cir-four-five').on('click',function () {
+          $(window).scrollTop(4400)
+          $(this).removeClass('select-circle')
+          $('#cir-li-four').addClass('select-circle')
+      })
+
+      $('#cir-four-one').on('click',function () {
+          $(window).scrollTop(0)
+          $(this).removeClass('select-circle')
+          $('#cir-li-four').addClass('select-circle')
 
       })
       $('#pro-cir').on('mouseover',function () {
@@ -683,12 +710,6 @@ var CSSettings = {"pluginPath":"images"};
       })
       $('#pro-cir').on('mouseleave',function () {
           $(this).css('opacity','0.5')
-
-      })
-      $('#cir-four-one').on('click',function () {
-          $(window).scrollTop(0)
-          $(this).removeClass('select-circle')
-          $('#cir-li-four').addClass('select-circle')
 
       })
   </script>
@@ -701,8 +722,8 @@ var CSSettings = {"pluginPath":"images"};
     <li class="" id="cir-five-one"></li>
     <li class="" id="cir-five-two"></li>
     <li class="" id="cir-five-three"></li>
+    <li class="" id="cir-five-four"></li>
     <li class="select-circle" id="cir-li-five"></li>
-    <li class=""></li>
 
   </ul>
   <div class="sk-title">
@@ -742,19 +763,21 @@ var CSSettings = {"pluginPath":"images"};
       <div id="prz1"><img class="bg" src="images/bg/5.png" alt="">
         <img class="img" src="images/001/prz1.JPG" alt="">
       </div>
-      <div id="prz2"><img class="bg" src="images/bg/6.png" alt="">
+      <div id="prz2"><img class="bg1" src="images/bg/6.1.png" alt="">
         <img class="img" src="images/001/prz2.JPG" alt="">
+        <img class="bg2" src="images/bg/6.2.png" alt="">
       </div>
-      <div id="prz3"><img class="bg" src="images/bg/4.png" alt="">
+      <div id="prz3"><img class="bg1" src="images/bg/4.1.png" alt="">
         <img class="img" src="images/001/prz3.JPG" alt="">
-      </div>JPG
+        <img class="bg2" src="images/bg/4.2.png" alt="">
+      </div>
       <div id="prz4"><img class="bg" src="images/bg/3.png" alt="">
         <img class="img" src="images/001/prz4.JPG" alt="">
       </div>
       <div id="prz5"><img class="bg" src="images/bg/2.png" alt="">
         <text>½±Ñ§½ð</text>
       </div>
-        <div id="prz6">
+      <div id="prz6">
           <div><img class="bg" src="images/bg/1.png" alt="">
           <img class="img" src="images/001/prz5.1.JPG" alt="">
           </div>
@@ -772,11 +795,40 @@ var CSSettings = {"pluginPath":"images"};
     </div>
     <img class="wrong" id="wrong" src="images/bg/´íºÅ.png" alt="">
   </div>
-  <div>
-
-  </div>
 
   <script>
+      $("#prz-cir li").on('mouseover',function () {
+          $(this).addClass('select-circle').siblings().removeClass('select-circle')
+      })
+      $('#cir-five-two').on('click',function () {
+          $(window).scrollTop(1000)
+          $(this).removeClass('select-circle')
+          $('#cir-li-five').addClass('select-circle')
+      })
+      $('#cir-five-three').on('click',function () {
+          $(window).scrollTop(1900)
+          $(this).removeClass('select-circle')
+          $('#cir-li-five').addClass('select-circle')
+      })
+      $('#cir-five-four').on('click',function () {
+          $(window).scrollTop(2900)
+          $(this).removeClass('select-circle')
+          $('#cir-li-five').addClass('select-circle')
+      })
+      $('#cir-li-five').on('click',function () {
+          $(window).scrollTop(4400)
+      })
+      $('#cir-five-one').on('click',function () {
+          $(window).scrollTop(0)
+          $(this).removeClass('select-circle')
+          $('#cir-li-five').addClass('select-circle')
+      })
+      $('#prz-cir').on('mouseover',function () {
+          $(this).css('opacity','1')
+      })
+      $('#prz-cir').on('mouseleave',function () {
+          $(this).css('opacity','0.5')
+      })
     $('.time-six').on('click',function () {
         $('.prz-hide').css('visibility','visible')
         $('#prz1').show().siblings().hide()
@@ -806,10 +858,8 @@ var CSSettings = {"pluginPath":"images"};
     })
     $('.time-one').on('mouseover',function () {
         $('.time-one img').fadeIn(500);
-
         $('.prz-six').addClass('text-show')
         $('.prz-six').siblings().removeClass('text-show')
-
     })
     $('.time-two').on('mouseover',function () {
         $('.time-two img').fadeIn(500);
@@ -830,13 +880,11 @@ var CSSettings = {"pluginPath":"images"};
         $('.time-five img').fadeIn(500);
         $('.prz-two').siblings().removeClass('text-show')
         $('.prz-two').addClass('text-show')
-
     })
     $('.time-six').on('mouseover',function () {
         $('.time-six img').fadeIn(500);
         $('.prz-one').siblings().removeClass('text-show')
         $('.prz-one').addClass('text-show')
-
     })
     $('.time-six').on('mouseleave',function () {
         $('.time-six img').fadeOut(500);
