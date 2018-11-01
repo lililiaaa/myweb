@@ -1024,6 +1024,78 @@ width: 250px;
 	margin-top: 200rem;
 	width: 100%;
 }
+.bigwu{
+	height: 660px;
+	width: 500px;
+	margin-top: -568px;
+	position: absolute;
+	z-index: 60;
+}
+.wu1{
+	height: 300px;
+	width: 300px;
+	margin-top: -263px;
+	margin-left: 1397px;
+	z-index: 70;
+	position: absolute;
+}
+
+.wu2{
+	height: 150px;
+	width: 150px;
+	margin-top: -149px;
+	margin-left: 1287px;
+	z-index: 70;
+	position: absolute;
+}
+.wu3{
+	height: 70px;
+	width: 70px;
+	margin-top: -69px;
+	margin-left: 1069px;
+	z-index: 70;
+	position: absolute;
+}
+.wu4{
+	height: 120px;
+	width: 120px;
+	margin-top: -119px;
+	margin-left: 1153px;
+	z-index: 70;
+	position: absolute;
+}
+.myself h1{
+	color: #ffd920;
+	font-size: 132px;
+	margin: -103px 0 0 0px;
+	font-family: "EL";
+}
+.myself:hover{
+
+}
+.myself text{
+	color: #ffc427;
+	text-indent: 36px;
+	font-size: 24px;
+	width: 805px;
+	font-weight: 600;
+}
+.transition .mytext{
+	color: #4a4a4a;
+	font-size: 16px;
+	width: 758px;
+	margin-top: 75px;
+	font-weight: 500;
+}
+.myself{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 550px;
+	height: 15rem;
+	margin-left: 500px;
+}
 /*联系我*/
 .callme{
 	background-image: url("http://img.hb.aicdn.com/75bfc022d150dd22c9d3902b9cf53fded550260d23c6e-GZLZXJ_fw658");

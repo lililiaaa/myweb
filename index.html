@@ -126,11 +126,11 @@ var CSSettings = {"pluginPath":"images"};
     }
     .circle{
       position: absolute;
-      margin-top: -35rem;
+      margin-top: -36rem;
       margin-left: 8rem;
       z-index: 500;
       opacity: 0.5;
-      height: 435px;
+      height: 455px;
       border-left: 2px solid #ffd920;
     }
     .circle li{
@@ -139,8 +139,8 @@ var CSSettings = {"pluginPath":"images"};
       border-radius: 50%;
       height: 20px;
       width: 20px;
-      margin: 53px;
-      margin-left: -10px;
+      margin: 45px;
+      margin-left: -11px;
       opacity: 1;
     }
     .circle .select-circle{
@@ -151,6 +151,27 @@ var CSSettings = {"pluginPath":"images"};
     .introduction .cir-two{
       margin-top:50px ;
       margin-left: 11.3rem;
+    }
+    .body .zuo{
+      display: none;
+      width: 276px;
+      height: 200px;
+      margin-bottom: -67px;
+      margin-top: -110px;
+      position: absolute;
+      margin-left: 490px;
+      z-index: 60;
+   
+    }
+    .body .you{
+  display: none;
+      width: 250px;
+      height: 280px;
+
+      margin-top: 265px;
+      position: absolute;
+      margin-left: -425px;
+      z-index: 60;
     }
   </style>
 </head>
@@ -211,7 +232,9 @@ var CSSettings = {"pluginPath":"images"};
     </div>
   </div>
 </div>
-<div class="mtn">
+<div class="mtn" id="mtn">
+  <img class="zuo" id="zuo" src="images/001/zuo.png" alt="">
+  <img class="you" id="you" src="images/001/you.png" alt="">
   <div class="myname">
     <div class="text text0">welcome to my blog!</div>
     <div class="text text1">The footsteps of struggle never cease</div>
@@ -225,9 +248,17 @@ var CSSettings = {"pluginPath":"images"};
   <li class="" id="cir-three"></li>
   <li class="" id="cir-four"></li>
   <li class="" id="cir-five"></li>
-
+  <li class="" id="cir-six"></li>
 </ul>
 <script>
+  $('#mtn').on('mouseover',function () {
+      $('#zuo').fadeIn(300)
+      $('#you').fadeIn(500)
+  })
+  $('#mtn').on('mouseleave',function () {
+      $('#zuo').fadeOut(1000)
+      $('#you').fadeOut(1000)
+  })
     $('#circle').on('mouseover',function () {
         $(this).css('opacity','1')
     })
@@ -292,7 +323,7 @@ var CSSettings = {"pluginPath":"images"};
     <li class="" id="cir-two-three"></li>
     <li class="" id="cir-two-four"></li>
     <li class="" id="cir-two-five"></li>
-
+    <li class="" id="cir-two-six"></li>
   </ul>
   <div class="box">
 
@@ -309,8 +340,9 @@ var CSSettings = {"pluginPath":"images"};
         <div>年龄：20</div>
 
         <div>QQ：1123543277</div>
+        <div>毕业院校：东北林业大学</div>
         <div>联系方式：15504620218</div>
-        <div>毕业院校：东北林业大学本科</div>
+
         <div>电子邮箱：1123543277@qq.com</div>
         <div class="a">github:&nbsp&nbsp&nbsp<a href="https://github.com/lililiaaa">https://github.com/lililiaaa</a></div>
         <a href="https://github.com/lililiaaa">
@@ -396,6 +428,7 @@ var CSSettings = {"pluginPath":"images"};
     <li class="select-circle" id="cir-li-three"></li>
     <li class=""  id="cir-three-four"></li>
     <li class="" id="cir-three-five"></li>
+    <li class="" id="cir-three-six"></li>
   </ul>
   <div class="sk-title">
     <div class="sk-line1"></div>
@@ -539,7 +572,7 @@ var CSSettings = {"pluginPath":"images"};
     <li class="" id="cir-four-three"></li>
     <li class="select-circle" id="cir-li-four"></li>
     <li class="" id="cir-four-five"></li>
-
+    <li class="" id="cir-four-six"></li>
   </ul>
   <div class="pro-box" id="pro-box">
   <div class="sk-title">
@@ -724,7 +757,7 @@ var CSSettings = {"pluginPath":"images"};
     <li class="" id="cir-five-three"></li>
     <li class="" id="cir-five-four"></li>
     <li class="select-circle" id="cir-li-five"></li>
-
+    <li class="" id="cir-five-six"></li>
   </ul>
   <div class="sk-title">
     <div class="sk-line1"></div>
@@ -910,13 +943,24 @@ var CSSettings = {"pluginPath":"images"};
 <!--过渡-->
 <div class="transition">
   <div class="myself">
-    <h1>myself</h1>
-    <text>热情，积极向上，热爱前端，渴望学习到更多知识，经常阅读大牛源码，在
-      CSDN,简书等论坛上学习讨论，喜欢浏览技术博客，阅读原文档。我自信，我努力，我学习，我，你值得拥有
+    <h1 id="myself">myself</h1>
+    <text class="mytext">热情，积极向上，热爱前端，渴望学习到更多知识，经常阅读大牛源码，在
+      CSDN,简书等论坛上学习讨论，喜欢浏览技术博客，阅读原文档。
     </text>
+    <text>我自信，我努力，我学习，用代码编织梦想，我，你值得拥有</text>
   </div>
-  <img src="" alt="">
-  <img src="" alt="">
+  <img class="wu1" src="images/001/wu1.png" alt="">
+  <img class="bigwu" src="images/001/bigwu.png" alt="">
+  <img class="wu2" src="images/001/wu2.png" alt="">
+  <img class="wu3" src="images/001/wu3.png" alt="">
+  <img class="wu4" src="images/001/wu4.png" alt="">
+
+  <script type="text/javascript" src="js/parabola.js"></script>
+  <script>
+    $('#myself').on('mouseover',function () {
+        $(this).animate()
+    })
+  </script>
 </div>
 <!--联系我-->
 <div class="callme">
