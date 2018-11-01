@@ -169,8 +169,8 @@
          */
         reset: function (x, y) {
             this.stop();
-            x = x ? x : 0;
-            y = y ? y : 0;
+            x = 860;
+            y = -47;
             this.domove(x, y);
             return this;
         },
