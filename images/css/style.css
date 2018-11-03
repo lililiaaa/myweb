@@ -1147,14 +1147,119 @@ width: 250px;
 	margin-right: 5px;
 }
 .call-bg .div{
-	margin-left: 600px;
+	margin-left: 660px;
 	margin-top: 60px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	height: 300px;
+	height: 345px;
+	font-size: 15px;
+}
+.callme .div text{
+	line-height: 15px;
+}
+.callme .div h1{
+	font-size: 61px;
+	margin-bottom: 20px;
+	margin-left: -90px;
+	font-family: Algerian;
+	margin-top: 44px;
 }
 .callme .div img{
-	height: 100px;
-	width: 100px;
+	height: 15px;
+	width: 15px;
+}
+.callme .div .hide{
+	display: flex;
+	background-color: white;
+}
+.call-hide1{
+	visibility: hidden;
+	margin-left: -73px;
+	margin-top: -5px;
+	line-height: 16px;
+	height: 16px;
+	position: absolute;
+	border: 2px solid white;
+}
+.call-hide2{
+	visibility: hidden;
+	position: absolute;
+	border: 2px solid white;
+	margin-left: -134px;
+	margin-top: -29px;
+}
+.callme .call-hide2 img{
+	height: 130px;
+	width: 102px;
+}
+.call-hide3{
+	visibility: hidden;
+	margin-left: -113px;
+	margin-top: -5px;
+	line-height: 16px;
+	border-radius: 30px;
+	padding: 3px;
+	height: 16px;
+	position: absolute;
+	background-color: white;
+	border: 2px solid white;
+}
+.call-hide4{
+	visibility: hidden;
+	position: absolute;
+	border: 2px solid white;
+	margin-left: -134px;
+	margin-top: -29px;
+}
+.callme .call-hide4 img{
+	height: 130px;
+	width: 110px;
+}
+.zhuan{
+	display: flex;
+}
+.jiao{
+	display:block;
+	width:0;
+
+	height:0;
+	border-width:10px 0 10px 10px;
+	border-style:solid;
+	border-color:transparent transparent transparent #ffffff;/*透明 透明 透明 黄*/
+	position:absolute;
+
+}
+.jiao1{
+	top: -2px;
+	left: 52px;
+}
+.jiao2{
+	top: 22px;
+	left: 103px;
+}
+.jiao3{
+	top: 0px;
+	left: 94px;
+}
+.jiao4{
+	top: 21px;
+	left: 112px;
+}
+.add{
+	width: 100%;
+	text-align: center;
+	margin-top: 400px;
+	font-size: 20px;
+	color: #836b0c;
+	position: absolute;
+}
+.by{
+	margin-left: 1090px;
+	margin-top: 332px;
+	opacity: 0.5;
+}
+.callme .cir-six{
+	margin-top: 265px;
+	margin-left: 11.3rem;
 }

@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <title>Miss婷的小网页</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
 <link rel="stylesheet" href="images/css/style.css" />
   <link rel="stylesheet" href="//at.alicdn.com/t/font_876200_5jo62orac18.css">
 <script type='text/javascript' src='images/js/modernizr.min.js?ver=2.6.1'></script>
@@ -29,6 +30,9 @@ var CSSettings = {"pluginPath":"images"};
       font-family:'EL';
       src:url('images/font/EL_Capitan.otf') format('opentype');
 
+    }
+    .music{
+      display: none;
     }
     .text{
       color: #404040;
@@ -99,7 +103,7 @@ var CSSettings = {"pluginPath":"images"};
       border-radius: 30px;
     }
     .nav-li div{
-      margin: 20px 50px;
+      margin: 20px 37px;
       transition: all .2s ease-in;
     }
     .nav-li{
@@ -165,21 +169,24 @@ var CSSettings = {"pluginPath":"images"};
    
     }
     .body .you{
-  display: none;
+      display: none;
       width: 250px;
       height: 280px;
-
       margin-top: 265px;
       position: absolute;
       margin-left: -425px;
       z-index: 60;
     }
+
+
   </style>
 </head>
 <body>
 <!--首页-->
 <div class="body">
+  <audio class="music" src="images/songs/fade.mp3"  autoplay="autoplay" ></audio>
 <div class="c-demoslider">
+
   <div id="cuteslider_3_wrapper" class="cs-circleslight">
     <div id="cuteslider_3" class="cute-slider" data-width="970" data-height="425" data-overpause="true">
       <ul data-type="slides">
@@ -225,11 +232,12 @@ var CSSettings = {"pluginPath":"images"};
   <div class="nav" id="nav">
     <div class="nav-li">
       <div class="na-1">我的博客</div>
-      <div>我的简介</div>
-      <div>我的项目</div>
-      <div>我的荣誉</div>
-      <div>我的技能</div>
-      <div>联系我</div>
+      <div  class="cir-two">我的简介</div>
+      <div class="cir-three">我的技能</div>
+      <div class="cir-four">我的项目</div>
+      <div class="cir-five">我的荣誉</div>
+      <div class="cir-six">联系我</div>
+      <div class="">评论区</div>
     </div>
   </div>
 </div>
@@ -244,13 +252,14 @@ var CSSettings = {"pluginPath":"images"};
   </div>
 </div>
 <ul class="circle" id="circle">
-  <li class="select-circle" id="cir-one"></li>
-  <li class="" id="cir-two"></li>
-  <li class="" id="cir-three"></li>
-  <li class="" id="cir-four"></li>
-  <li class="" id="cir-five"></li>
-  <li class="" id="cir-six"></li>
+  <li class="select-circle cir-one" id="cir-one"></li>
+  <li class="cir-two" id="cir-two"></li>
+  <li class="cir-three" id="cir-three"></li>
+  <li class="cir-four" id="cir-four"></li>
+  <li class="cir-five" id="cir-five"></li>
+  <li class="cir-six" id=""></li>
 </ul>
+
 <script>
     $(document).ready(function() {
         $('.beatText').beatText({isAuth:false,isRotate:false});
@@ -269,28 +278,33 @@ var CSSettings = {"pluginPath":"images"};
     $('#circle').on('mouseleave',function () {
         $(this).css('opacity','0.5')
     })
-    $('#cir-three').on('click',function () {
+    $('.cir-three').on('click',function () {
         $(window).scrollTop(1900)
         $(this).removeClass('select-circle')
         $('#cir-one').addClass('select-circle')
     })
-    $('#cir-four').on('click',function () {
+    $('.cir-four').on('click',function () {
         $(window).scrollTop(2900)
         $(this).removeClass('select-circle')
         $('#cir-one').addClass('select-circle')
     })
-    $('#cir-five').on('click',function () {
+    $('.cir-five').on('click',function () {
         $(window).scrollTop(4400)
         $(this).removeClass('select-circle')
         $('#cir-one').addClass('select-circle')
     })
-    $('#cir-two').on('click',function () {
+    $('.cir-six').on('click',function () {
+        $(window).scrollTop(6000)
+        $(this).removeClass('select-circle')
+        $('#cir-one').addClass('select-circle')
+    })
+    $('.cir-two').on('click',function () {
     $(window).scrollTop(960)
         $(this).removeClass('select-circle')
         $('#cir-one').addClass('select-circle')
 
     })
-    $('#cir-one').on('click',function () {
+    $('.cir-one').on('click',function () {
         $(window).scrollTop(0)
     })
     $(".circle li").on('mouseover',function () {
@@ -378,6 +392,11 @@ var CSSettings = {"pluginPath":"images"};
       })
       $('#cir-two-five').on('click',function () {
           $(window).scrollTop(4400)
+          $(this).removeClass('select-circle')
+          $('#cir-li-two').addClass('select-circle')
+      })
+      $('#cir-two-six').on('click',function () {
+          $(window).scrollTop(6000)
           $(this).removeClass('select-circle')
           $('#cir-li-two').addClass('select-circle')
       })
@@ -542,6 +561,11 @@ var CSSettings = {"pluginPath":"images"};
       })
       $('#cir-three-five').on('click',function () {
           $(window).scrollTop(4400)
+          $(this).removeClass('select-circle')
+          $('#cir-li-three').addClass('select-circle')
+      })
+      $('#cir-three-six').on('click',function () {
+          $(window).scrollTop(6000)
           $(this).removeClass('select-circle')
           $('#cir-li-three').addClass('select-circle')
       })
@@ -735,7 +759,11 @@ var CSSettings = {"pluginPath":"images"};
           $(this).removeClass('select-circle')
           $('#cir-li-four').addClass('select-circle')
       })
-
+      $('#cir-four-six').on('click',function () {
+          $(window).scrollTop(6000)
+          $(this).removeClass('select-circle')
+          $('#cir-li-four').addClass('select-circle')
+      })
       $('#cir-four-one').on('click',function () {
           $(window).scrollTop(0)
           $(this).removeClass('select-circle')
@@ -849,6 +877,11 @@ var CSSettings = {"pluginPath":"images"};
       })
       $('#cir-five-four').on('click',function () {
           $(window).scrollTop(2900)
+          $(this).removeClass('select-circle')
+          $('#cir-li-five').addClass('select-circle')
+      })
+      $('#cir-five-six').on('click',function () {
+          $(window).scrollTop(6000)
           $(this).removeClass('select-circle')
           $('#cir-li-five').addClass('select-circle')
       })
@@ -1033,15 +1066,58 @@ var CSSettings = {"pluginPath":"images"};
 </div>
 <!--联系我-->
 <div class="callme">
+  <ul class="circle cir-six" id="call-cir">
+    <li class="" id="cir-six-one"></li>
+    <li class="" id="cir-six-two"></li>
+    <li class="" id="cir-six-three"></li>
+    <li class="" id="cir-six-four"></li>
+    <li class="" id="cir-six-five"></li>
+    <li class="select-circle" id="cir-li-six"></li>
+  </ul>
   <div class="mycall">
     <div>
       <div class="call-bg">
         <div class="div">
           <h1>About &nbsp&nbsp me</h1>
-          <div><div>call me</div><img src="images/bg/dianhua.png" alt=""> <text>15504620218</text></div>
-          <div><div><img src="" alt=""></div><img src="images/bg/QQ.png" alt=""><text>1123543277</text></div>
-          <div><img src="images/bg/xitongtubiaoicon.png" alt=""><text>1123543277@qq.com</text></div>
-          <div><img src="images/bg/weixin.png" alt=""><text>ZH199804100525</text></div>
+          <div class="zhuan">
+            <div class="call-hide1 hide">
+              call me
+              <div class="jiao jiao1"></div>
+            </div>
+            <div id="img1">
+              <img  src="images/bg/dianhua.png" alt="">
+              <text >15504620218</text>
+            </div>
+            </div>
+          <div class="zhuan">
+            <div class="call-hide2">
+              <img src="images/bg/q.jpg" alt="">
+              <div class="jiao jiao2"></div>
+            </div>
+            <div id="img2">
+            <img src="images/bg/QQ.png" alt="">
+            <text>1123543277</text>
+            </div>
+          </div>
+          <div class="zhuan">
+            <div class="call-hide3">期待您的邮件
+              <div class="jiao jiao3"></div>
+            </div>
+            <div id="img3">
+            <img  src="images/bg/xitongtubiaoicon.png" alt="">
+            <text>1123543277@qq.com</text>
+            </div>
+          </div>
+          <div class="zhuan">
+            <div class="call-hide4">
+              <img src="images/bg/ww.png" alt="">
+              <div class="jiao jiao4"></div>
+            </div>
+            <div id="img4">
+            <img src="images/bg/weixin.png" alt="">
+            <text>ZH199804100525</text>
+            </div>
+          </div>
           <div>学无止境，用代码编织梦想</div>
           <div>欢迎您评论，荣幸之至</div>
         </div>
@@ -1052,7 +1128,79 @@ var CSSettings = {"pluginPath":"images"};
       </div>
     </div>
   </div>
+  <div class="add">@本网站由李振婷个人原创，感谢您的浏览,byebye</div>
+  <img class="by" src="images/001/bye.png" alt="">
+  <script>
+      $("#call-cir li").on('mouseover',function () {
+          $(this).addClass('select-circle').siblings().removeClass('select-circle')
+      })
+      $('#cir-six-two').on('click',function () {
+          $(window).scrollTop(1000)
+          $(this).removeClass('select-circle')
+          $('#cir-li-six').addClass('select-circle')
+      })
+
+      $('#cir-six-three').on('click',function () {
+          $(window).scrollTop(1900)
+          $(this).removeClass('select-circle')
+          $('#cir-li-six').addClass('select-circle')
+
+      })
+      $('#cir-li-six').on('click',function () {
+          $(window).scrollTop(6000)
+
+      })
+      $('#cir-six-four').on('click',function () {
+          $(window).scrollTop(2900)
+          $(this).removeClass('select-circle')
+          $('#cir-li-six').addClass('select-circle')
+      })
+      $('#cir-six-five').on('click',function () {
+          $(window).scrollTop(4400)
+          $(this).removeClass('select-circle')
+          $('#cir-li-six').addClass('select-circle')
+      })
+
+      $('#cir-six-one').on('click',function () {
+          $(window).scrollTop(0)
+          $(this).removeClass('select-circle')
+          $('#cir-li-six').addClass('select-circle')
+
+      })
+      $('#call-cir').on('mouseover',function () {
+          $(this).css('opacity','1')
+      })
+      $('#call-cir').on('mouseleave',function () {
+          $(this).css('opacity','0.5')
+
+      })
+    $('#img1').on('mouseover',function () {
+        $('.call-hide1').css('visibility','visible')
+    })
+    $('#img1').on('mouseleave',function () {
+        $('.call-hide1').css('visibility','hidden')
+    })
+    $('#img2').on('mouseover',function () {
+        $('.call-hide2').css('visibility','visible')
+    })
+    $('#img2').on('mouseleave',function () {
+        $('.call-hide2').css('visibility','hidden')
+    })
+    $('#img3').on('mouseover',function () {
+        $('.call-hide3').css('visibility','visible')
+    })
+    $('#img3').on('mouseleave',function () {
+        $('.call-hide3').css('visibility','hidden')
+    })
+    $('#img4').on('mouseover',function () {
+        $('.call-hide4').css('visibility','visible')
+    })
+    $('#img4').on('mouseleave',function () {
+        $('.call-hide4').css('visibility','hidden')
+    })
+  </script>
 </div>
+
 <script>
 
 </script>
