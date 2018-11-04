@@ -6,27 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="../assets/images/css/style.css" />
     <link rel="stylesheet" href="//at.alicdn.com/t/font_876200_5jo62orac18.css">
-    <script type='text/javascript' src='../assets/images/js/modernizr.min.js?ver=2.6.1'></script>
+
     <script src="../assets/images/js/jquery-3.3.1.min.js"></script>
-    <script type='text/javascript'>
-        /* <![CDATA[ */
-        var CSSettings = {"pluginPath":"images"};
-        /* ]]> */
-    </script>
-    <script type='text/javascript' src='../assets/images/js/cute.slider.js?ver=2.0.0'></script>
-    <script type='text/javascript' src='../assets/images/js/cute.transitions.all.js?ver=2.0.0'></script>
+
     <style>
         @font-face{
             font-family:'Diamor';
-            src:url('../assets//font/Diamor.ttf') format('truetype');
+            src:url('../assets/images/font/Diamor.ttf') format('truetype');
         }
         @font-face{
             font-family:'wild';
-            src:url('../assets/font/somethingwild-Regular.ttf') format('truetype');
+            src:url('../assets/images/font/somethingwild-Regular.ttf') format('truetype');
         }
         @font-face{
             font-family:'EL';
-            src:url('../assets/font/EL_Capitan.otf') format('opentype');
+            src:url('../assets/images/font/EL_Capitan.otf') format('opentype');
 
         }
         .music{
@@ -178,51 +172,55 @@
 
 
     </style>
+
+    <link rel="stylesheet" type="text/css" href="../assets/images/images/engine/style.css" media="screen" />
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+
+
+
+
+
+
+
 </head>
 <body>
 <!--首页-->
+
 <div class="body">
     <audio class="music" src="../assets/images/songs/fade.mp3" id="myaudio"  autoplay="autoplay"></audio>
-    <div class="c-demoslider">
 
-        <div id="cuteslider_3_wrapper" class="cs-circleslight">
-            <div id="cuteslider_3" class="cute-slider" data-width="970" data-height="425" data-overpause="true">
-                <ul data-type="slides">
-                    <li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr27,tr32,tr53,tr54,tr62,tr63,tr4,tr13,tr45" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="../assets/images/001/8.jpg" data-thumb="../assets/images/001/8a.jpg"><a data-type="link" href="#" ></a> </li>
-                    <li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr32,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="../assets/images/bg/blank.png" data-src="../assets/images/001/9.jpg" data-thumb="../assets/images/001/9a.jpg"><a data-type="link" href="#" ></a> </li>
-                    <li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr32,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr41"><img  src="../assets/images/bg/blank.png" data-src="../assets/images/001/hhh.jpg" data-thumb="../assets/images/001/hhha.jpg"><a data-type="link" href="#" ></a> </li>
-                    <li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr32,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="../assets/images/bg/blank.png" data-src="../assets/images/001/timg.jpg" data-thumb="../assets/images/001/timga.jpg"><a data-type="link" href="#" ></a></li>
-                    <li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr32,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="../assets/images/bg/blank.png" data-src="../assets/images/001/7.jpg" data-thumb="../assets/images/001/7a.jpg"><a data-type="link" href="#" ></a></li>
-                    <li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr32,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41"><img  src="../assets/images/bg/blank.png" data-src="../assets/images/001/1.png" data-thumb="../assets/images/001/1a.jpg"><a data-type="link" href="#" ></a> </li>
-                </ul>
-                <ul data-type="controls">
-                    <li data-type="captions"></li>
-                    <li data-type="link"></li>
-                    <li data-type="video"></li>
-                    <li data-type="slideinfo"></li>
-                    <li data-type="circletimer"></li>
-                    <li data-type="previous"></li>
-                    <li data-type="next"></li>
-                    <li data-type="bartimer"></li>
-                    <li data-type="slidecontrol" data-thumb="true" data-thumbalign="up"></li>
-                </ul>
+    <div class="container">
+        <div style="position: relative;" class="slideshow grid_12">
+            <div class="holder" style="">
+                <!-- 主体部分 -->
+                <div id="wowslider-container">
+                    <div class="ws_images">
+                        <ul>
+                            <li> <a href="#"> <img src="../assets/images/001/8.jpg" alt="123" title="" /> </a> </li>
+                            <li> <a href="#"> <img src="../assets/images/001/1.png" alt="456" title="" /> </a></li>
+                            <li> <a href="#"> <img src="../assets/images/001/9.jpg" alt="789" title="" /> </a></li>
+                            <li> <a href="#"> <img src="../assets/images/001/7.jpg" alt="789" title="" /> </a></li>
+                        </ul>
+                    </div>
+                    <div class="ws_bullets">
+                        <div>
+                            <a href="#"> <img src="../assets/images/001/8a.jpg" alt="CSS3 Slider" /> </a>
+                            <a href="#"> <img src="../assets/images/001/1a.jpg" alt="CSS Slideshow" /> </a>
+                            <a href="#"> <img src="../assets/images/001/9a.jpg" alt="CSS Gallery" /> </a>
+                            <a href="#"> <img src="../assets/images/001/7a.jpg" alt="Video Support" /> </a>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript" src="../assets/images/images/engine/wowslider.js"></script>
+                <script type="text/javascript" src="../assets/images/images/engine/script.js"></script>
+                <!-- 主体部分. -->
             </div>
         </div>
-        <script type="text/javascript">
-            var cuteslider3 = new Cute.Slider();
-            cuteslider3.setup("cuteslider_3", "cuteslider_3_wrapper", "images/css/slider-style.css");
-            cuteslider3.api.addEventListener(Cute.SliderEvent.CHANGE_START,
-                function(event) {});
-            cuteslider3.api.addEventListener(Cute.SliderEvent.CHANGE_END,
-                function(event) {});
-            cuteslider3.api.addEventListener(Cute.SliderEvent.WATING,
-                function(event) {});
-            cuteslider3.api.addEventListener(Cute.SliderEvent.CHANGE_NEXT_SLIDE,
-                function(event) {});
-            cuteslider3.api.addEventListener(Cute.SliderEvent.WATING_FOR_NEXT,
-                function(event) {});
-        </script>
     </div>
+
+
+
+
     <div id="nav-all">
         <div class="header" id="header">
             <img src="../assets/images/001/header.jpg" alt="">
@@ -322,7 +320,7 @@
 
     </script>
 </div>
-<!--<!--个人介绍-->-->
+<!--个人介绍-->
 <div class="introduction">
     <div class="sk-title in-title">
         <div class="sk-line1"></div>
@@ -588,7 +586,7 @@
         })
     </script>
 </div>
-<!--<!--我的项目-->-->
+<!--我的项目-->
 <div class="project">
     <ul class="circle cir-four" id="pro-cir">
         <li class="" id="cir-four-one"></li>
@@ -775,7 +773,7 @@
         })
     </script>
 </div>
-<!--<!--我的荣誉-->-->
+<!--我的荣誉-->
 <div class="prize">
 
     <div class="show">
