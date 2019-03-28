@@ -1,6 +1,4 @@
 /* Div */
-
-
 *{
 	margin: 0;
 	padding: 0;
@@ -53,7 +51,7 @@ body{
 	}
 	body .introduction{
 		margin-top: 30px;
-      	height:67rem;
+      	height:85rem;
 		background-color: white;
 	}
 	.body .text0 {
@@ -427,7 +425,7 @@ body a {
 	background-size: cover;
 
 	margin-top: 100px;
-	height: 65rem;
+	height: 85rem;
 }
 .introduction .sk-title{
 	padding-top: 160px;
@@ -521,7 +519,7 @@ body a {
 	background-repeat: no-repeat;
 	padding-top: 100px;
 	margin-top: -18px;
-	height: 26rem;
+	height: 44rem;
 }
 .sk-title{
 	display: flex;
@@ -554,8 +552,8 @@ body a {
 	font-size: 70px;
 }
 .sk-one{
-	margin-top: 30px;
-	margin: 10px;
+	margin-top: 70px;
+
 }
 .sk-two{
 	margin-bottom: 50px;
@@ -701,7 +699,7 @@ body a {
 .project{
 	background-color: #fffbfc;
 	background-image: url("../bg/bg2.png")	;
-	height: 100rem;
+	height: 120rem;
 	z-index: 1;
 	position: absolute;
 
@@ -743,7 +741,7 @@ body a {
 	align-items: center;
 	height: 18vmax;
 	padding-right: 7vmax;
-	width: 16vmax;
+	width: 22vmax;
 
 	background-color: #505050;
 }
@@ -835,10 +833,10 @@ body a {
 	background-image: url("../bg/bg.png");
 	background-size: cover;
 	background-position: 50%;
-	height: 100rem;
+	height: 151rem;
 	z-index: 1;
 	position: absolute;
-	margin-top: 100rem;
+	margin-top: 120rem;
 	width: 100%;
 }
 .fang img{
@@ -1093,18 +1091,18 @@ body a {
 .transition{
 	background-color: #fffbfc;
 	background-image: url("../bg/bg2.png")	;
-	height: 15rem;
+	height: 20rem;
 	z-index: 1;
 	position: absolute;
 	background-position: 50%;
 	background-size: cover;
-	margin-top: 200rem;
+	margin-top: 270rem;
 	width: 100%;
 }
 .bigwu{
 	height: 39vmax;
 	width: 30vmax;
-	margin-top: -33vmax;
+	margin-top: -29vmax;
 	position: absolute;
 	z-index: 60;
 }
@@ -1174,7 +1172,7 @@ body a {
 	justify-content: space-around;
 	align-items: center;
 	
-	height: 15rem;
+	height: 20rem;
 
 }
 .back{
@@ -1189,10 +1187,10 @@ body a {
 	background-image: url("../bg/bg.png");
 	background-size: cover;
 	background-position: 50%;
-	height: 77rem;
+	height: 106rem;
 	z-index: 1;
 	position: absolute;
-	margin-top: 215rem;
+	margin-top: 290rem;
 	width: 100%;
 
 }

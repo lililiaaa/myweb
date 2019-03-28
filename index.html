@@ -4,6 +4,13 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Miss婷的小网页</title>
   <link rel="icon" type="image/x-icon" href="images/bg/favicon.ico"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="http://at.alicdn.com/t/font_762210_9hjtdfufdo.css">
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="stylesheet" href="images/css/style.css" />
   <link rel="stylesheet" href="//at.alicdn.com/t/font_876200_5jo62orac18.css">
@@ -131,7 +138,7 @@
     .circle .select-circle{
       background: black;
       border: 7px solid #ffd920;
-      margin-left: -16px;
+      margin-left: -8px;
     }
     .introduction .cir-two{
       margin-top:50px ;
@@ -165,12 +172,14 @@
 </head>
 <body>
 <!--首页-->
+<div class="container-fluid">
+ 
 <div class="more">
   <div class="body">
 
   <audio class="music" src="images/songs/fade.mp3" id="myaudio"  autoplay="autoplay"></audio>
 
-  <div class="container">
+  <div >
     <div id="nav-all">
       <div class="header" id="header">
         <img src="images/001/header.jpg" alt="">
@@ -306,7 +315,10 @@
   </script>
 </div>
 </div>
+
+
 <!--个人介绍-->
+
 <div class="introduction">
   <div class="sk-title in-title">
     <div class="sk-line1"></div>
@@ -469,6 +481,7 @@
 
   </script>
 </div>
+
 <!--我的技能-->
 <div class="skill">
   <ul class="circle cir-three" id="sk-cir">
@@ -1160,6 +1173,7 @@
           $('.call-hide4').css('visibility','hidden')
       })
   </script>
+</div>
 </div>
 </body>
 </html>
