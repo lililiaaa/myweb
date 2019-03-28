@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人网站项目</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_762210_9hjtdfufdo.css">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="jquery-1.8.2.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        @media (max-width: 1160px) {
+            video {
+                display: none;
+            }
+        }
+
+        .bg {
+            height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            position: absolute;
+            z-index: -5;
+
+        }
+
+        .bg .img {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            background-position: 50%;
+            background-size: cover;
+            background-image: url("http://pi6hibzd0.bkt.clouddn.com/75bfc022d150dd22c9d3902b9cf53fded550260d23c6e-GZLZXJ_fw658.png");
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #0f0f0f;
+        }
+
+        .top {
+            width: 100%;
+            height: 100%;
+            margin-top: 5vmax;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .body {
+            width: 80%;
+        }
+
+        .hero .icon-youjiantou {
+            position: absolute;
+            right: 24px;
+            top: 200px;
+            width: 48px;
+            z-index: 100;
+            color: #2e5d18;
+            font-size: 70px;
+        }
+
+        .page-header h1 {
+            color: whitesmoke;
+            font-size: 2.5vmax;
+        }
+
+        .media h1 {
+            color: #58ce37;
+            font-size: 2.5vmax;
+            margin-bottom: 20px;
+        }
+
+        .media {
+            color: whitesmoke;
+
+            font-size: 1.5vmax;
+            margin-bottom: 3.5vmax;
+        }
+
+        .footer {
+            margin: 10vmax 0;
+        }
+
+        .media img {
+            width: 15vmax;
+            height: 13vmax;
+        }
+
+        h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .back {
+            position: absolute;
+            display: flex;
+            width: 10%;
+            left: 0;
+            top: 0;
+            z-index: 15;
+            margin: 10px;
+            font-size: 2vmax;
+        }
+
+        .myback {
+            display: block;
+        }
+
+        .list-group li {
+            margin-bottom: 35px;
+            font-size: 2vmax;
+        }
+
+        span {
+            margin-right: 50px;
+            margin-bottom: 20px;
+        }
+
+        .btn3 {
+            margin-left: 193px;
+        }
+
+        .img img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .btn {
+
+            position: fixed;
+        }
+
+        .btn2 {
+            margin-left: 96px;
+        }
+		.btn4 {
+            margin-left: 286px;
+        }
+    </style>
+</head>
+<body>
+<div class="bg">
+    <div class="img"></div>
+</div>
+<div class="top">
+    <div class="body">
+
+        <div class="page-header">
+            <h1>Miss婷个人网站
+                <small>个人项目</small>
+            </h1>
+        </div>
+        <div class="media">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object" src="../img/jianjie.png" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h1 class="media-heading">项目简介</h1>
+                个人简历，个人介绍，项目介绍，个人博客，分享自己的一些经验心得
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object" src="../img/skill.png" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h1 class="media-heading">项目技术</h1>
+                使用 html,css 实现静态页面，使用 h5,css3 实现动态效果<br>利用 js,jquery 实现前端页面交互，
+                实现响应式布局，有手机端，网页端两种格局。<br>后端采用 php 语言，使用 ci 框架进行开发
+            </div>
+        </div>
+
+
+        <div class="page-header">
+            <h1>Miss婷个人网站页面
+                <small>已在网站中展现,请返回查看</small>
+            </h1>
+        </div>
+
+
+
+
+
+
+
+
+</div>
+</div>
+<div class="page-header footer">
+    <h1>Miss婷个人网站
+        <small>感谢您的浏览，欢迎评论哦！</small>
+    </h1>
+</div>
+<div class="back">
+    <div class="myback">
+        <a href="../../talk/talk.html"><button class="btn btn-primary" type="button" >
+            点击评论
+        </button></a>
+        <a href="../../index.html"><button class="btn btn2 btn-primary" type="button" >
+            我的主页
+        </button></a>
+        <a href="https://github.com/lililiaaa/myweb"><button class="btn btn3 btn-primary" type="button">
+            git链接
+        </button></a>
+      <a href="https://lililiaaa.github.io/"><button class="btn btn4 btn-primary" type="button">
+            博客链接
+        </button></a>
+    </div>
+</div>
+
+</body>
+</html>

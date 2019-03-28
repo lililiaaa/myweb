@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>可爱多好物分享</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_762210_9hjtdfufdo.css">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="jquery-1.8.2.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        @media (max-width: 1160px) {
+            video {
+                display: none;
+            }
+        }
+
+        .bg {
+            height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            position: absolute;
+            z-index: -5;
+
+        }
+
+        .bg .img {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            background-position: 50%;
+            background-size: cover;
+            background-image: url("http://pi6hibzd0.bkt.clouddn.com/75bfc022d150dd22c9d3902b9cf53fded550260d23c6e-GZLZXJ_fw658.png");
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #0f0f0f;
+        }
+
+        .top {
+            width: 100%;
+            height: 100%;
+            margin-top: 5vmax;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero img {
+            width: 100%;
+        }
+
+        .hid div {
+            width: 14.7%;
+        }
+
+        .hid {
+            width: 700%;
+            transition: all 0.3s ease;
+            display: flex;
+        }
+
+        .hero {
+            margin-top: 5vmax;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .body {
+            width: 80%;
+        }
+
+        .hero .icon-youjiantou {
+            position: absolute;
+            right: 24px;
+            top: 200px;
+            width: 48px;
+            z-index: 100;
+            color: #2e5d18;
+            font-size: 70px;
+        }
+
+        .page-header h1 {
+            color: whitesmoke;
+            font-size: 2.5vmax;
+        }
+
+        .media h1 {
+            color: #58ce37;
+            font-size: 2.5vmax;
+            margin-bottom: 20px;
+        }
+
+        .media {
+            color: whitesmoke;
+
+            font-size: 1.5vmax;
+            margin-bottom: 3.5vmax;
+        }
+
+        .footer {
+            margin: 10vmax 0;
+        }
+
+        .media img {
+            width: 15vmax;
+            height: 13vmax;
+        }
+
+        h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .back {
+            position: absolute;
+            display: flex;
+            width: 10%;
+            left: 0;
+            top: 0;
+            z-index: 15;
+            margin: 10px;
+            font-size: 2vmax;
+        }
+
+        .myback {
+            display: block;
+        }
+
+        .list-group li {
+            margin-bottom: 35px;
+            font-size: 2vmax;
+        }
+
+        span {
+            margin-right: 50px;
+            margin-bottom: 20px;
+        }
+
+        .btn3 {
+            margin-left: 193px;
+        }
+
+        .img img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .btn {
+
+            position: fixed;
+        }
+
+        .btn2 {
+            margin-left: 96px;
+        }
+		.btn4 {
+            margin-left: 290px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="bg">
+    <div class="img"></div>
+</div>
+<div class="top">
+    <div class="body">
+
+        <div class="page-header">
+            <h1>可爱多好物分享
+                <small>个人项目</small>
+            </h1>
+        </div>
+        <div class="media">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object" src="../img/jianjie.png" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h1 class="media-heading">项目简介</h1>
+                向他人分享一些个人喜爱的好物，好图，音乐等
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object" src="../img/skill.png" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h1 class="media-heading">项目技术</h1>
+                使用 html,css 实现静态页面，使用 h5,css3 实现动态效果，<br>利用 js,jquery 实现前端页面交
+                互。使用响应式布局，有移动端，PC 端等三种布局方式<br>后端采用php,ci框架搭建，实现了注册（验证），登录功能
+            </div>
+        </div>
+
+
+        <div class="page-header">
+            <h1>pc电脑版可爱多页面
+                <small>为您展现</small>
+            </h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-12">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/4f026bd0eacb262fccb6a6944a58188c75a5dd97de34c-U32hWf_fw658"
+                         alt="...">
+                    <div class="caption">
+                        <h2>可爱多好物首页</h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-12">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/c94d9af6a66465682d1f110650c46c775161f692b3ac2-BMkuG9_fw658"
+                         alt="...">
+                    <div class="caption">
+                        <h2>点击样式（首页）</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-12">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/defeef6c27cf4baab3411e045ed18da552b424695865d-RLu8vq_fw658"
+                         alt="...">
+                    <div class="caption">
+                        <h2>下滑样式（首页）</h2>
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-8 col-md-12">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/f047445db9ed0936745962baad5ad47f4e2f2714aa92-zOynZF_fw658"
+                         alt="...">
+                    <div class="caption">
+                        <h2>登录功能</h2>
+                    </div>
+                </div>
+            </div>
+          <div class="col-sm-8 col-md-12">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/77fb0adb53ebd5e9d9e021c1e77abb488d5c9b299eae-TfA2PW_fw658"
+                         alt="...">
+                    <div class="caption">
+                        <h2>注册功能</h2>
+                    </div>
+                </div>
+            </div>
+          <div class="col-sm-8 col-md-12">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/89a871c3402c2f78518aa4e4a00140a084077c7b969f-VlIyuv_fw658"
+                         alt="...">
+                    <div class="caption">
+                        <h2>登录成功</h2>
+                    </div>
+                </div>
+            </div>
+        <div class="col-sm-8 col-md-12">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/f4086198859817b99cdcc93251f356c83aa935c914760-JzEqY3_fw658"
+                         alt="...">
+                    <div class="caption">
+                        <h2>进入主页</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-header">
+            <h1>中等格局（移动端）页面
+                <small>为您展现</small>
+            </h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/05af0b495db1ed37286dd2ab757d470991151e06bec0-gd3RsT_fw658"
+                         alt="...">
+                    <div class="caption">
+                        <h2>可爱多好物首页<br>（中等格局）</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/7a37f3bfc0575015ab50de0759ea65ba867e801732ba-4AquIQ_fw658"
+                         alt="...">
+                    <div class="caption">
+                        <h2>可爱多首页（移动端）</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/06966903a1465d028550cc793da0536abb96237933db-5zlxw7_fw658"
+                         alt="...">
+                    <div class="caption">
+                        <h2>下滑样式（移动端）</h2>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="page-header">
+            <h1>缩小格局页面
+                <small>为您展现</small>
+            </h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/eca4c4bc1fb50b38efdb2ce15809f385ebfde993861e-GNzcq1_fw658"
+                         alt="...">
+                    <div class="caption">
+                        <h2>可爱多好物首页<br>（缩小格局）</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/0fae99f874ff459b489f71e8caf4278a7fff65cda512-afgfQy_fw658"
+                         alt="...">
+                    <div class="caption">
+                        <h2>下滑样式（缩小格局）</h2>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+</div>
+<div class="page-header footer">
+    <h1>可爱多好物项目
+        <small>感谢您的浏览，欢迎评论哦！</small>
+    </h1>
+</div>
+<div class="back">
+    <div class="myback">
+        <a href="../../talk/talk.html"><button class="btn btn-primary" type="button" >
+            点击评论
+        </button></a>
+        <a href="../../index.html"><button class="btn btn2 btn-primary" type="button" >
+            我的主页
+        </button></a>
+        <a href="https://github.com/lililiaaa/cute"><button class="btn btn3 btn-primary" type="button">
+            git链接
+        </button></a>
+       <a href="../../cute"><button class="btn btn4 btn-primary" type="button">
+            进入项目
+        </button></a>
+    </div>
+</div>
+
+</body>
+</html>

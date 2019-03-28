@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+          <html lang="zh-CN">
+        <head>
+         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>树一树小程序项目</title>
+        <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="http://at.alicdn.com/t/font_762210_9hjtdfufdo.css">
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="jquery-1.8.2.min.js"></script>
+        <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        @media (max-width: 1160px) {
+            video{
+                display: none;
+            }
+        }
+        .bg{
+            height: 100%;
+            top:0;
+            left: 0;
+            width: 100%;
+            position: absolute;
+            z-index: -5;
+
+        }
+        .bg .img{
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            background-position: 50%;
+            background-size: cover;
+            background-image: url("http://pi6hibzd0.bkt.clouddn.com/75bfc022d150dd22c9d3902b9cf53fded550260d23c6e-GZLZXJ_fw658.png");
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+           justify-content: space-around;
+            align-items: center;
+            background-color: #0f0f0f;
+        }
+        .top{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero img{
+            width: 100%;
+        }
+        .hid div{
+            width: 14.7%;
+        }
+        .hid{
+            width: 700%;
+            transition: all 0.3s ease;
+            display: flex;
+        }
+        .hero{
+            margin-top: 5vmax;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .body{
+            width: 80%;
+        }
+        .hero .icon-youjiantou{
+            position: absolute;
+            right: 24px;
+            top: 200px;
+            width: 48px;
+            z-index: 100;
+            color: #2e5d18;
+            font-size: 70px;
+        }
+        .page-header h1{
+            color: whitesmoke;
+            font-size: 2.5vmax;
+        }
+        .media h1{
+            color: #58ce37;
+            font-size: 2.5vmax;
+            margin-bottom: 20px;
+        }
+        .media{
+            color: whitesmoke;
+
+            font-size: 1.5vmax;
+            margin-bottom: 3.5vmax;
+        }
+        .media img{
+            width: 15vmax;
+            height: 13vmax;
+        }
+        h3{
+            color: white;
+            margin-bottom: 20px;
+        }
+        .back{
+            position: absolute;
+            display: flex;
+            width: 10%;
+            left: 0;
+            top: 0;
+            z-index: 15;
+            margin: 10px;
+            font-size: 2vmax;
+        }
+        .myback{
+            display: block;
+        }
+        .list-group li{
+            margin-bottom: 35px;
+            font-size: 2vmax;
+        }
+        span{
+                margin-right: 50px;
+                margin-bottom: 20px;
+        }
+        .img img{
+            height: 100%;
+            width: 100%;
+        }
+        .btn{
+
+           position: fixed;
+        }
+        .footer{
+            margin: 10vmax 0;
+        }
+        .btn3{
+            margin-left: 193px;
+        }
+            .btn2{
+                margin-left: 96px;
+            }
+    </style>
+</head>
+<body>
+<div class="bg">
+   <div class="img"></div>
+</div>
+<div class="top">
+    <div class="body">
+        <div class="hero">
+            <div class="hid">
+                <div class="frist">
+                    <a href="">
+                        <img class="img-show" src="../img/shu1.png" alt="">
+
+                    </a>
+                </div>
+                <div class="second">
+                    <a href="">
+                        <img class="img-show" src="../img/shu2.png" alt="">
+                    </a>
+                </div>
+                <div class="third">
+                    <a href="">
+                        <img class="img-show" src="../img/shu3.png" alt="">
+                    </a>
+                </div>
+                <div class="third">
+                    <a href="">
+                        <img class="img-show" src="../img/shu5.png" alt="">
+                    </a>
+                </div>
+                <div class="third">
+                    <a href="">
+                        <img class="img-show" src="../img/shu6.png" alt="">
+                    </a>
+                </div>
+                <div class="third">
+                    <a href="">
+                        <img class="img-show" src="../img/shu4.png" alt="">
+                    </a>
+                </div>
+
+                <div class="frist">
+                    <a href="">
+                        <img class="img-show" src="../img/shu1.png" alt="">
+
+                    </a>
+
+                </div>
+
+            </div>
+            <i class="iconfont icon-youjiantou"></i>
+        </div>
+        <div class="page-header">
+            <h1>树一树习惯小程序 <small>为您解说</small></h1>
+        </div>
+        <div class="media">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object" src="../img/jianjie.png" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h1 class="media-heading">项目简介</h1>
+                一个通过线上模拟树屋商城方式，帮助习惯养成的微信小程序<br>参加腾讯高校微信小程序开发大
+                赛东北赛区二等奖，互联网+创新创业大赛黑龙江省三等奖等，荣获四个奖项<br>
+                树一树便是帮助用户坚持习惯养成。挖掘用户喜欢的东西，通过美观的房屋精灵吸引用户，并在坚持养成习惯的过程中给予丰富奖励与鼓励，趣味无穷
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object" src="../img/man.png" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h1 class="media-heading">项目职责</h1>
+                本人担任项目队长<br>
+                从想法创意，需求分析到学习微信小程序开发，书写计划书视频，原型 UI 界面
+                设计，比赛答辩均由本人完成<br>个人完成该项目前端代码，前端交互，与后端连接。
+                <br>后端，数据库设计,ui设计由队员帮助完成
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object" src="../img/skill.png" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h1 class="media-heading">项目技术</h1>
+                使用 wxml,wxss,实现前端界面，使用 js 调用 API 实现页面交互<br>
+                使用 axure 实现原型,使用ps进行ui设计<br>设用腾讯云平台托管后端数据库 后端整体使用 PHP 的 Codelgniter 框架，使用 git 进行团队
+            </div>
+        </div>
+        <div class="page-header">
+            <h1>树一树荣誉 <small>为您分享(证书已在个人荣誉中展示) </small>  </h1>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-success">2018.06 获得微信小程序开发大赛东北赛区二等奖</li>
+            <li class="list-group-item list-group-item-info">2018.05 获得东北林业大学微信小程序开发大赛校赛一等奖</li>
+            <li class="list-group-item list-group-item-warning">2018.09 获得黑龙江省互联网+创新创业大赛省赛三</li>
+            <li class="list-group-item list-group-item-danger">2018.06 获得互联网+创新创业大赛校赛新星奖</li>
+        </ul>
+
+        <div class="page-header">
+            <h1>树一树视频 <small>为您演示 </small>  </h1>
+        </div>
+        <h3> <a href="https://v.qq.com/x/page/n0686w2u1qp.html"><span class="label label-default">宣传视频连接</span></a>
+            <a href="https://v.qq.com/x/page/n0686w2u1qp.html "><span class="label label-default">演示视频连接</span></a>
+        </h3>
+        <div class="video">
+            <video src="../img/shu.mp4" controls="controls"></video>
+        </div>
+        <div class="page-header">
+            <h1>树一树页面 <small>为您展现 </small>  </h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/b1c31adfd630307e39469b8123447b4b3cb921e46f7a-i6nkjc_fw658" alt="...">
+                    <div class="caption">
+                        <h2>首页</h2>
+                        <p>树一树小程序首页</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/47ce0b5376b3f52ac5e33917ec970ef09b2ade7f211be-5udUTt_fw658" alt="...">
+                    <div class="caption">
+                        <h2>早起签到（习惯养成）</h2>
+                        <p>一日之计在于晨，光阴似箭日月如梭；<br>
+                            每天坚持树一树早起签到，感受清晨美好阳光，营造美丽人生哦！每天坚持早起签到，即可获得15个叶子币哦！今天的你早起了吗！还可以分享给自己的小伙伴哦！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/6555033caa38e74af7cdb6c0891f6d0c53fcd77862ad-AOwcci_fw658" alt="...">
+                    <div class="caption">
+                        <h2>知识问答（习惯养成）</h2>
+                        <p>是否想要成为上知天文下知地理，知识渊博的学霸？
+                            在这里你可以在知识的海洋中遨游，丰富自己的常识，学习更多知识哦！
+                            知识问答中包含了生活中，学习中的各种知，每答对一题即可获得3个叶子币哦！
+                            加油，亲！快来挑战吧，获得属于自己的叶子币！</p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="row">    
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/c70d1c7fe6150f3c276c71a9df13532af9cf6dcf3fea9-SFlSHB_fw658" alt="...">
+                    <div class="caption">
+                        <h2>心情果实（习惯养成）</h2>
+                        <p>
+                            点开心情果实吧！有几率触发中奖事件，轻松获得叶子币哦，
+                                每天只能点击5次，也可用3个叶子币兑换一次点击次数哦！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/836307afa02e453b7a1fa206c1f826c5f61ea51a7060-jbSdBu_fw658" alt="...">
+                    <div class="caption">
+                        <h2>单词积累（习惯养成）</h2>
+                        <p> 还在为不能坚持背单词而苦恼么？
+                            想要拥有庞大的词汇量吗？
+                            坚持背单词，对5个单词即可获得3个叶子币哦！
+                            亲们加油！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/da04c7ce8a7058be02a51a521079d343fff17876b83f-kgsEzc_fw658" alt="...">
+                    <div class="caption">
+                        <h2>运动步数（习惯养成）</h2>
+                        <p>生命在于运动，想要邂逅男神女神吗，为了美好身材，为了身体健康，来树一树运动吧；不同步数兑换不同叶子币
+                           </p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="../img/fangwu.png" alt="...">
+                    <div class="caption">
+                        <h2>房屋详情（房屋商城）</h2>
+                        <p>房屋的详细介绍页面
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="../img/wu.png" alt="...">
+                    <div class="caption">
+                        <h2>我的页面</h2>
+                        <p>显示已购买的房屋，精灵<br>
+                            可查看购买房屋内部样式图<br>
+                            可喂养精灵，与其对话<br>
+                            可将自己获得的房屋和精灵分享
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="../img/shop.png" alt="...">
+                    <div class="caption">
+                        <h2>商城（兑换区）</h2>
+                        <p>商城中有着很多房屋样式可以购买，会展示房屋外部图片，价格，房屋介绍，但未购买前只能查看外部，购买后可查看内部
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="row">  
+            
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/33fd10b73f548197e8ae171978c62398a1156455136f0-modV9D_fw658" alt="...">
+                    <div class="caption">
+                        <h2>我的好友</h2>
+                        <p>  可添加别人为自己的好友；只有自己的好友可查看房屋精灵样式，
+                            可查看排行榜，排行榜中显示叶子币总数前20名用户，可添加好友；
+                            还有社区页面会显示新上线的房屋样式以及好友的打卡分享
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/0decc852fe3b382f73d4c01911e8eba0473874ea9b70e-gXv8PX_fw658" alt="...">
+                    <div class="caption">
+                        <h2>实体奖品兑换</h2>
+                        <p>可以兑换自己喜爱的实体奖品
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="http://img.hb.aicdn.com/2e3b0d2794a20af2c07c05ec7dafd705181cd5542cf01-KesA9Y_fw658" alt="...">
+                    <div class="caption">
+                        <h2>情况统计</h2>
+                        <p>统计自己的学习情况，激励自己坚持下去
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      
+    </div>
+</div>
+<div class="page-header footer">
+    <h1>树一树项目 <small>感谢您的浏览，欢迎评论哦！</small></h1>
+</div>
+<div class="back">
+    <div class="myback">
+        <a href="../../talk/talk.html"><button class="btn btn-primary" type="button" >
+            点击评论
+        </button></a>
+        <a href="../../index.html"><button class="btn btn2 btn-primary" type="button" >
+            我的主页
+        </button></a>
+        <a href="https://github.com/lililiaaa/tree"><button class="btn btn3 btn-primary" type="button">
+            git链接
+        </button></a>
+    </div>
+</div>
+<script>
+    var odiv=document.querySelector(".hid div");
+    var owidth=odiv.offsetWidth;
+    $(window).resize(function() {
+        owidth=odiv.offsetWidth;
+    });
+    var timer;
+    var num=0
+    timer=setInterval(function () {
+        play();
+    },1500)
+    function play() {
+
+        if (num > 6) {
+
+            $(".hid").css("transition", "unset");
+            $(".hid").css("transform", "translateX(0px)")
+            num = 0;
+
+        } else {
+            $(".hid").css("transition", "all 0.5s ease");
+            $(".hid").css("transform", "translateX(" + (-num * owidth) + 'px)');
+            num++;
+        }
+    }
+    $(".hero").hover(function () {
+        clearInterval(timer);
+        console.log("hhh")
+    },function () {
+        timer=setInterval(function () {
+            play();
+        },1000)
+    })
+    $(".icon-youjiantou").on("click",function () {
+        play();
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,495 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.hide img{
+
+}
+a{
+    color: #ff8ded;
+}
+.left{
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    background: white;
+    z-index: 200;
+}
+.right{
+    left: auto;
+    margin-left: 30%;
+
+    width: 70%;
+
+}
+.right .img-hide{
+    display:none;
+}
+body{
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    font-family: "Gotham", Helvetica, Arial, PingFangSC-Regular, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+@media (max-width: 1025px) {
+    .left{
+        width: 100%;
+        position: absolute;
+        height:183px ;
+    }
+    .tag-ad{
+        display: none;
+    }
+    .right{
+        width: 100%;
+        margin-left: 0px;
+        margin-top:183px ;
+    }
+    .right .img-hide{
+        display:none;
+    }
+    .left .contain{
+        height: 183px;
+        width: 100%;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+    }
+    .contain .header{
+        padding: 16px;
+    }
+    .contain .body{
+        display: block;
+    }
+    .contain .entry{
+        margin-top: 0px;
+        padding: 0 16px;
+    }
+    .overlay{
+        height: 100%;
+    }
+}
+@media (max-width: 641px) {
+    .left{
+        height: 62px;
+    }
+    .tag-ad{
+        display: none;
+    }
+    .left .contain{
+        height: 62px;
+    }
+    .contain .header{
+        display: none;
+    }
+    .kuai .button{
+        display: none;
+    }
+    .contain .entry{
+        padding: 16px 16px 0 16px;
+    }
+    .overlay{
+        height: 100%;
+    }
+    .right .img-show{
+        display:none;
+    }
+    .right .img-hide{
+        display:block;
+    }
+    .left .overlay .body{
+        padding: 0 16px;
+    }
+    .right{
+        margin-top: 63px;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    .right .promotion{
+        padding: 24px 0;
+    }
+}
+
+/*left-contain*/
+.contain{
+    height: 100%;
+}
+.left .overlay .click{
+    transform: scale(1);
+}
+
+.header{
+    padding: 24px;
+    height: 48px;
+}
+.logo{
+    margin-right: 12px;
+    width: 36px;
+    float: left;
+}
+li{
+    text-align: -webkit-match-parent;
+}
+.text ul{
+    display: flex;
+line-height: 35px;
+}
+.text ul li a{
+    color: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: 5px 10px 5px;
+    text-transform: uppercase;
+
+}
+.icon-liebiao{
+    color: gray;
+    opacity: 0.8;
+    float: right;
+    margin-top: -25px;
+}
+.icon-liebiao:hover{
+    opacity: 1;
+}
+.body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-height: 62px;
+}
+.entry{
+    margin-top: -50px;
+    padding: 0 24px 0 84px;
+}
+.entry .icon-kafei{
+    font-size: 30px;
+}
+.display-1{
+    margin-bottom: 24px;
+    font-weight: 700;
+    color: #e7bb4d;
+}
+.denglu{
+    float: left;
+    margin-right: 24px;
+    padding: 6px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+.denglu img{
+    margin-right: 7px;
+}
+.kuai{
+    height: 135px;
+}
+
+.zhuce{
+    border: 1px solid #ff8ded;
+    font-size: 16px;
+    border-radius: 30px;
+    padding: 5px 10px;
+    margin-top: -5px;
+}
+/*left-overlay*/
+.overlay{
+    height: 100%;
+    display: none;
+    overflow: scroll;
+    background: white;
+}
+.overlay .header{
+    height: 36px;
+}
+.overlay .icon-iconfontclose2{
+    color: gray;
+    opacity: 0.8;
+    float: right;
+   font-size: 30px;
+}
+.overlay .icon-iconfontclose2:hover{
+    opacity: 1;
+}
+.middle{
+
+    width: 100%;
+}
+.overlay .middle ul li a{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: inherit;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.middle ul li{
+    padding: 6px 0;
+}
+.overlay .body{
+    padding-left: 84px;
+    padding-right: 24px;
+    display: block;
+    transform: scale(1.2);
+    transition: all 1s ease;
+}
+.middle hr{
+    background: rgba(0, 0, 0, 0.12);
+    height: 1px;
+}
+.footer{
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.38);
+}
+.footer a{
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.38);
+    margin-bottom: 12px;
+}
+.overlay .contain{
+    padding-left: 84px;
+    height: 100%;
+}
+/*right*/
+.right .hero img{
+    width: 100%;
+}
+.hide div{
+    width: 25%;
+}
+.right .hide{
+    width: 400%;
+    transition: all 0.3s ease;
+    display: flex;
+}
+.hero{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.tag-ad{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0px 6px;
+    color: #fff;
+    background-color: #000;
+    font-size: 0.8rem;
+    line-height: 180%;
+    opacity: 0.6;
+    border-radius: 2px;
+    z-index: 200;
+}
+
+.hero .icon-youjiantou{
+    position: absolute;
+    right: 24px;
+    top: 188px;
+    width: 48px;
+    z-index: 100;
+    color: white;
+    font-size: 45px;
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+}
+.content img{
+    width: 100%;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+}
+.content img:hover{
+    box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.12);
+    transform: translatey(-5px);
+    transition: all 0.5s ease;
+}
+.promotion{
+    padding: 24px;
+    margin-top: -35px;
+
+}
+.promotion a{
+    padding: 12px;
+}
+
+/*coffee-house*/
+.coffee-house{
+    padding: 36px 0;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ h2,p{
+    margin-bottom: 18px;
+}
+ h2{
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+ p{
+    font-size: 1rem;
+    font-weight: 200;
+}
+.scroll{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%
+}
+.scroll-wapper{
+    width: 100%;
+
+}
+.scroll-items{
+    display: flex;
+    width: 163%;
+    transform: translatex(0px);
+}
+.scroll .zuo,.scroll .you{
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fcfaff;
+
+}
+.scroll .zuo{
+    position: absolute;
+    margin-top: 210px;
+    margin-left: 38px;
+    z-index: 100;
+    display: none;
+}
+.scroll .you{
+    position: absolute;
+    right: 38px;
+    margin-top: -316px;
+}
+.scroll .you:hover{
+    transform: translatex(5px);
+    transition: all 0.5s ease;
+}
+.scroll .zuo:hover{
+    transform: translatex(-5px);
+    transition: all 0.5s ease;
+}
+.scroll .icon-iconfontyoujiantou1,.scroll .icon-youjiantou{
+    font-size: 15px;
+    line-height: 30px;
+    margin-left: 7px;
+}
+.scroll-wapper{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 768px;
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+
+}
+.scroll a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: inherit;
+    margin-top: 12px;
+    margin-bottom: 30px;
+    margin-right: 16px;
+    padding-bottom: 18px;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+}
+.scroll a:hover{
+    box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.12);
+    transform: translatey(-5px);
+    transition: all 0.5s ease;
+}
+.scroll strong{
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.wapper{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 768px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.tmall{
+    padding-top: 36px;
+    padding-bottom: 36px;
+    background: #efefef;
+}
+.tmall ul{
+    padding-top: 48px;
+    display: flex;
+
+}
+
+.tmall ul li img{
+    margin-top: -36px;
+    height: 72px;
+    max-width: 100%;
+}
+.tmall ul li{
+    width: 162px;
+    height: 196px;
+    background: white;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.tmall ul li:hover{
+    transform: translatey(-5px);
+    transition: all 0.5s ease;
+}
+.tmall ul li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tmall ul li:nth-child(1) a img{
+    margin-top: -48px;
+    height: 108px;
+    margin-bottom: -24px;
+}
+.grid p:nth-of-type(1){
+    margin: 24px 0;
+    color: black;
+}
+.grid p:nth-of-type(2){
+  font-size: 0.9rem;
+    color: black;
+    text-align: center;
+}
+.grid p:nth-of-type(3){
+    font-size: 0.7rem;
+    color: #C2A661;
+    font-weight: 400;
+    opacity: 0.7
+}
